@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductPage = ({ myRef }: { myRef: any }) => {
+const ProductPage = ({ myRef }: { myRef: React.RefObject<HTMLDivElement> }) => {
   return (
     <section id="productSection" className="productSection">
       <h2>ProductPage</h2>
