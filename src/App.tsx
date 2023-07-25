@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useRef } from "react";
+import "./App.css";
+import Home from "./sections/Home";
+import ProductPage from "./sections/ProductPage";
 
 function App() {
+  const myRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState<boolean>();
+
+  const handleClick = () => {
+    const element = document.getElementById("productSection");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  console.log({ isVisible });
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsVisible(entry.isIntersecting);
+      // console.log({ entry });
+    });
+    if (myRef.current) observer.observe(myRef.current);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <section id="one" className="one">
+          <h1>First Page</h1>
+          <p onClick={handleClick}>CLICK IT</p>
+        </section>
+        {/* <section className="two">
+        <h1>Second Page</h1>
+      </section> */}
+        <Home />
+        <ProductPage myRef={myRef} />
+      </div>
+      <p style={{ position: "absolute", bottom: 0 }}>
+        {isVisible ? "I'm in Product" : "I'm in Home"}
+      </p>
+    </>
   );
 }
 
