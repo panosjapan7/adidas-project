@@ -26,10 +26,10 @@ function App() {
   return (
     <>
       <div className="container">
-        <section id="one" className="one">
+        {/* <section id="one" className="one">
           <h1>First Page</h1>
           <p onClick={handleClick}>CLICK IT</p>
-        </section>
+        </section> */}
         {/* <section className="two">
         <h1>Second Page</h1>
       </section> */}
