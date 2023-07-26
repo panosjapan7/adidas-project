@@ -37,10 +37,10 @@ function App() {
         <Home />
         <ProductPage myRef={myRef} />
       </div>
-      <NavigationArrows />
-      <p style={{ position: "absolute", bottom: 0 }}>
+      <NavigationArrows isVisible={isVisible} />
+      {/* <p style={{ position: "absolute", bottom: 0 }}>
         {isVisible ? "I'm in Product" : "I'm in Home"}
-      </p>
+      </p> */}
     </div>
   );
 }
