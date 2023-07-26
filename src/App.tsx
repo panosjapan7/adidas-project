@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
+import NavigationArrows from "./components/NavigationArrows";
 
 function App() {
   const myRef = useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div>
       <div className="container">
         {/* <section id="one" className="one">
           <h1>First Page</h1>
@@ -36,10 +37,11 @@ function App() {
         <Home />
         <ProductPage myRef={myRef} />
       </div>
+      <NavigationArrows />
       <p style={{ position: "absolute", bottom: 0 }}>
         {isVisible ? "I'm in Product" : "I'm in Home"}
       </p>
-    </>
+    </div>
   );
 }
 
