@@ -3,6 +3,8 @@
   overflow-y: scroll;
   height: 100vh;
   position: relative;
+  border: 6px solid black;
+  border-radius: 10px;
 }
 
 section {
