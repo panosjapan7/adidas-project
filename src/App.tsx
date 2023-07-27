@@ -4,7 +4,6 @@ import "./App.css";
 import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
 import TopMenu from "./components/TopMenu";
-import About from "./pages/About";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
