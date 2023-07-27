@@ -3,6 +3,7 @@ import { SlArrowUp, SlArrowDown } from "react-icons/sl";
 import "./App.css";
 import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
+import TopMenu from "./components/TopMenu";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -79,6 +80,7 @@ function App() {
 
   return (
     <div>
+      <TopMenu />
       <div className="container" ref={containerRef}>
         <Home homeSectionRef={homeSectionRef} />
         <ProductPage productSectionRef={productSectionRef} />
