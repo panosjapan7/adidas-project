@@ -104,6 +104,12 @@ a:hover::before,
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: height 0.2s ease-in-out;
+}
+
+.cart-desktop-container:hover {
+  height: 100px;
 }
 
 .handbag-icon {
