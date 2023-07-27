@@ -27,3 +27,31 @@ h1 {
 .two {
   background-color: rgb(211, 79, 79);
 }
+
+.navivationArrows-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.navigationArrows-content-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.arrow-container {
+}
+.arrowUp,
+.arrowDown {
+  width: 26px;
+  height: auto;
+}
+
+.vertical-line {
+  border: 1px solid black;
+  /* height: 80px; */
+}
