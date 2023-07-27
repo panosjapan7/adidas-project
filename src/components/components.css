@@ -102,9 +102,10 @@ a:hover::before,
   border-radius: 0 0 5px 5px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
   transition: height 0.2s ease-in-out;
+  padding-bottom: 17px;
 }
 
 .cart-desktop-container:hover {
