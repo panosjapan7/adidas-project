@@ -15,7 +15,8 @@
 
 .arrow-container {
 }
-.arrow {
+.arrowUp,
+.arrowDown {
   width: 26px;
   height: auto;
 }
