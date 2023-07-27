@@ -1,10 +1,14 @@
 import React from "react";
 
-const ProductPage = ({ myRef }: { myRef: React.RefObject<HTMLDivElement> }) => {
+const ProductPage = ({
+  productSectionRef,
+}: {
+  productSectionRef: React.RefObject<HTMLDivElement>;
+}) => {
   return (
     <section id="productSection" className="productSection">
       <h2>ProductPage</h2>
-      <p ref={myRef}>
+      <p ref={productSectionRef}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel
         minima dicta odio iusto itaque eos voluptates, ipsa libero voluptatem?
       </p>
