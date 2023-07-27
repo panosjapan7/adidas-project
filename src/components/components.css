@@ -50,7 +50,6 @@
 .adidas-logo {
   width: 65px;
   height: auto;
-  /* align-self: center; */
 }
 
 a {
@@ -100,7 +99,7 @@ a:hover::before,
   height: 75px;
   background-color: black;
   align-self: center;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
   display: flex;
   justify-content: center;
   align-items: center;
