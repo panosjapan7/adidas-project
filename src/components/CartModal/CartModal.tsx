@@ -40,6 +40,14 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
             <p className="header">CART</p>
             <p className="header-quantity">(3 items)</p>
           </div>
+          <div className="cart-sections-container">
+            <p className="one">PRODUCT</p>
+            <p className="two">COLOR</p>
+            <p className="three">PRICE</p>
+            <p className="four">QUANTITY</p>
+            <p className="five">TOTAL</p>
+            <div className="hr"></div>
+          </div>
         </div>
       </motion.div>
     </Backdrop>
