@@ -18,7 +18,7 @@ function App() {
   const [lineFlag, setLineFlag] = useState(false);
   const [reachedBottom, setReachedBottom] = useState(false);
 
-  const [cartTagDragged, setCartTagDragged] = useState(true);
+  const [cartTagDragged, setCartTagDragged] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
