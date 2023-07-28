@@ -24,14 +24,7 @@ const dropIn = {
   },
 };
 
-const CartModal = ({
-  text,
-  cartTagDragged,
-}: {
-  text: any;
-  cartTagDragged: boolean;
-}) => {
-  console.log(cartTagDragged);
+const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
   return (
     <Backdrop>
       <motion.div
@@ -42,7 +35,11 @@ const CartModal = ({
         animate="visible"
         exit="exit"
       >
-        <p>{text}</p>
+        <div className="cart-contents-container">
+          <div className="header-container">
+            <p className="header">CART</p>
+          </div>
+        </div>
       </motion.div>
     </Backdrop>
   );

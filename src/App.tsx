@@ -89,9 +89,7 @@ function App() {
         setCartTagDragged={setCartTagDragged}
       />
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
-        {cartTagDragged && (
-          <CartModal cartTagDragged={cartTagDragged} text="HELLO THERE" />
-        )}
+        {cartTagDragged && <CartModal cartTagDragged={cartTagDragged} />}
       </AnimatePresence>
 
       <div className="container" ref={containerRef}>
