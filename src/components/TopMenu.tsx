@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
+import { motion } from "framer-motion";
 import { BsHandbag } from "react-icons/bs";
 import "./components.css";
 import adidasLogo from "../assets/adidas-logo-white.png";
+import CartModal from "./CartModal/CartModal";
 
 gsap.registerPlugin(Draggable);
 
-const TopMenu = () => {
+const TopMenu = ({
+  cartTagDragged,
+  setCartTagDragged,
+}: {
+  cartTagDragged: boolean;
+  setCartTagDragged: (cartTagDragge: boolean) => void;
+}) => {
   const [cartHeight, setCartHeight] = useState(175);
 
   useEffect(() => {
@@ -15,14 +23,15 @@ const TopMenu = () => {
       type: "y",
       bounds: {
         minY: 0,
-        maxY: 1,
+        maxY: 0,
       },
-      edgeResistance: 0.95,
+      edgeResistance: 0.9,
       onDrag() {
         this.prevY = this.y;
         console.log(this.y);
-        if (this.y > 65) {
+        if (this.y >= 35) {
           console.log("Dragged Enough!");
+          setCartTagDragged(!cartTagDragged);
         }
       },
       onDragEnd() {
@@ -37,7 +46,8 @@ const TopMenu = () => {
         );
       },
     });
-  }, []);
+    console.log({ cartTagDragged });
+  }, [cartTagDragged]);
 
   return (
     <div className="menu-wrapper">
@@ -52,7 +62,10 @@ const TopMenu = () => {
           <p className="text-links">github</p>
         </a>
       </div>
-      <div className="cart-desktop-container" style={{ height: cartHeight }}>
+      <div
+        className="cart-desktop-container"
+        style={{ height: cartHeight, zIndex: 100 }}
+      >
         <BsHandbag className="handbag-icon" />
       </div>
     </div>
