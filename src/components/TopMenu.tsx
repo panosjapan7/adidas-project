@@ -23,14 +23,13 @@ const TopMenu = ({
       type: "y",
       bounds: {
         minY: 0,
-        maxY: 0,
+        maxY: 0.4,
       },
-      edgeResistance: 0.9,
+      edgeResistance: 0.85,
       onDrag() {
         this.prevY = this.y;
         console.log(this.y);
-        if (this.y >= 35) {
-          console.log("Dragged Enough!");
+        if (this.y >= 45) {
           setCartTagDragged(!cartTagDragged);
         }
       },
@@ -46,8 +45,7 @@ const TopMenu = ({
         );
       },
     });
-    console.log({ cartTagDragged });
-  }, [cartTagDragged]);
+  }, [cartTagDragged, setCartTagDragged]);
 
   return (
     <div className="menu-wrapper">
