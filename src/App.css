@@ -20,14 +20,6 @@ h1 {
   color: rgb(226, 226, 226);
 }
 
-.one {
-  background-color: rgb(36, 164, 138);
-}
-
-.two {
-  background-color: rgb(211, 79, 79);
-}
-
 .navivationArrows-wrapper {
   position: absolute;
   bottom: 0;
@@ -54,4 +46,8 @@ h1 {
 .vertical-line {
   border: 1px solid black;
   /* height: 80px; */
+}
+
+.homeSection {
+  background-color: rgb(241, 241, 241, 1);
 }
