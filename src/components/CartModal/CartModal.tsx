@@ -29,7 +29,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
     <Backdrop>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="modal orange-gradient"
+        className="modal"
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -38,6 +38,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
         <div className="cart-contents-container">
           <div className="header-container">
             <p className="header">CART</p>
+            <p className="header-quantity">(3 items)</p>
           </div>
         </div>
       </motion.div>
