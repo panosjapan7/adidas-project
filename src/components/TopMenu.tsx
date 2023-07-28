@@ -17,7 +17,7 @@ const TopMenu = () => {
         minY: 0,
         maxY: 1,
       },
-      edgeResistance: 0.9,
+      edgeResistance: 0.95,
       onDrag() {
         this.prevY = this.y;
         console.log(this.y);
