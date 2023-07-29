@@ -151,7 +151,10 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <p className="product-price-mobile">TOTAL: $190.00</p>
               </div>
             </div>
-            <div className="subtotal-container-mobile"></div>
+            <div className="subtotal-container-mobile">
+              <div className="hr-mobile"></div>
+              <p className="subtotal-mobile">SUBTOTAL: $570.00</p>
+            </div>
           </div>
         </div>
       </motion.div>

@@ -181,6 +181,20 @@ th {
     font-weight: 500;
     font-size: 0.95rem;
   }
+  .subtotal-container-mobile {
+    text-align: center;
+  }
+  .hr-mobile {
+    border-top: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .subtotal-mobile {
+    font-family: "Inter", "sans-serif";
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 350px) {
