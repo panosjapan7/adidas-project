@@ -94,6 +94,27 @@ thead,
 th {
   padding: 5px;
 }
+.quantity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plus-icon,
+.minus-icon {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.plus-icon {
+  margin-right: 10px;
+}
+.minus-icon {
+  margin-left: 10px;
+}
+.quantity-table {
+  width: 20px;
+}
 .shoe-icon {
   width: 60px;
   height: auto;

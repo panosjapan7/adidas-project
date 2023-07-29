@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./cartModal.css";
+import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 import Backdrop from "./Backdrop";
 import ShoeIconBlack from "../../assets/shoe-icon-black.png";
 
@@ -69,7 +70,17 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <td>Black</td>
                 <td>9</td>
                 <td>$190.00</td>
-                <td>1</td>
+                <td>
+                  <div className="quantity-container">
+                    <span>
+                      <CiCircleMinus className="plus-icon" />
+                    </span>
+                    <p className="quantity-table">1</p>
+                    <span>
+                      <CiCirclePlus className="minus-icon" />
+                    </span>
+                  </div>
+                </td>
                 <td>$190.00</td>
               </tr>
               <tr>
@@ -84,7 +95,17 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <td>Black</td>
                 <td>9</td>
                 <td>$190.00</td>
-                <td>1</td>
+                <td>
+                  <div className="quantity-container">
+                    <span>
+                      <CiCircleMinus className="plus-icon" />
+                    </span>
+                    <p className="quantity-table">2</p>
+                    <span>
+                      <CiCirclePlus className="minus-icon" />
+                    </span>
+                  </div>
+                </td>
                 <td>$190.00</td>
               </tr>
               <tr>
@@ -99,7 +120,17 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <td style={{ paddingBottom: 20 }}>Black</td>
                 <td style={{ paddingBottom: 20 }}>9</td>
                 <td style={{ paddingBottom: 20 }}>$190.00</td>
-                <td style={{ paddingBottom: 20 }}>2</td>
+                <td style={{ paddingBottom: 20 }}>
+                  <div className="quantity-container">
+                    <span>
+                      <CiCircleMinus className="plus-icon" />
+                    </span>
+                    <p className="quantity-table">3</p>
+                    <span>
+                      <CiCirclePlus className="minus-icon" />
+                    </span>
+                  </div>
+                </td>
                 <td style={{ paddingBottom: 20 }}>$190.00</td>
               </tr>
               <tr className="hr-bottom">
