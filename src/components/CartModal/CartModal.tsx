@@ -106,6 +106,22 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
               </tr>
             </tbody>
           </table>
+
+          <div className="cart-container-mobile">
+            <div className="product-card-mobile">
+              <img
+                src={ShoeIconBlack}
+                className="shoe-icon-mobile"
+                alt="shoe-icon"
+              />
+              <div className="product-details-container-mobile">
+                <p className="product-name-mobile">ultraboost 1.0</p>
+                <p className="product-color-mobile">Black</p>
+                <p className="product-price-mobile">$190.00</p>
+              </div>
+            </div>
+            <div className="subtotal-container-mobile"></div>
+          </div>
         </div>
       </motion.div>
     </Backdrop>

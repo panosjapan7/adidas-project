@@ -106,3 +106,81 @@ th {
   padding-right: 20px;
   font-weight: 600;
 }
+
+.cart-mobile-container,
+.cart-container-mobile {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  table {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-contents-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-container-mobile {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    max-width: 350px;
+  }
+  .product-card-mobile {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .shoe-icon-mobile {
+    width: 60px;
+    height: 100%;
+  }
+  .product-details-container-mobile {
+  }
+  .product-details-container-mobile p {
+    font-family: "Inter", "sans-serif";
+  }
+  .product-name-mobile {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+  }
+  .product-color-mobile {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .product-price-mobile {
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .product-card-mobile {
+    flex-direction: column;
+  }
+  .cart-container-mobile {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 260px) {
+  .header-container {
+    flex-direction: column;
+  }
+}
