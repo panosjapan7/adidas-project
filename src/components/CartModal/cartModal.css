@@ -137,10 +137,8 @@ th {
   .cart-container-mobile {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
     width: 100%;
-    max-width: 350px;
+    max-width: 300px;
     gap: 10px;
   }
   .product-card-mobile {
@@ -150,7 +148,7 @@ th {
     background-color: #f1f1f1;
     border-radius: 10px;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
   .shoe-icon-mobile {
@@ -198,6 +196,9 @@ th {
 }
 
 @media (max-width: 350px) {
+  .modal {
+    margin-top: 80px;
+  }
   .product-card-mobile {
     flex-direction: column;
   }
