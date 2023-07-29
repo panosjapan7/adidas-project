@@ -47,6 +47,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <th>{/* Intentionally Blank */}</th>
                 <th>PRODUCT</th>
                 <th>COLOR</th>
+                <th>SIZE</th>
                 <th>PRICE</th>
                 <th>QUANTITY</th>
                 <th>TOTAL</th>
@@ -66,6 +67,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 </th>
                 <td>ultraboost 1.0</td>
                 <td>Black</td>
+                <td>9</td>
                 <td>$190.00</td>
                 <td>1</td>
                 <td>$190.00</td>
@@ -80,6 +82,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 </th>
                 <td>ultraboost 1.0</td>
                 <td>Black</td>
+                <td>9</td>
                 <td>$190.00</td>
                 <td>1</td>
                 <td>$190.00</td>
@@ -94,6 +97,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 </th>
                 <td style={{ paddingBottom: 20 }}>ultraboost 1.0</td>
                 <td style={{ paddingBottom: 20 }}>Black</td>
+                <td style={{ paddingBottom: 20 }}>9</td>
                 <td style={{ paddingBottom: 20 }}>$190.00</td>
                 <td style={{ paddingBottom: 20 }}>2</td>
                 <td style={{ paddingBottom: 20 }}>$190.00</td>
@@ -102,7 +106,7 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <td></td>
               </tr>
               <tr className="subtotal-container">
-                <td colSpan={6}>SUBTOTAL: $570.00</td>
+                <td colSpan={7}>SUBTOTAL: $570.00</td>
               </tr>
             </tbody>
           </table>
@@ -116,8 +120,35 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
               />
               <div className="product-details-container-mobile">
                 <p className="product-name-mobile">ultraboost 1.0</p>
-                <p className="product-color-mobile">Black</p>
-                <p className="product-price-mobile">$190.00</p>
+                <p className="product-color-mobile">color: Black</p>
+                <p className="product-size-mobile">size: 9</p>
+                <p className="product-price-mobile">TOTAL: $190.00</p>
+              </div>
+            </div>
+            <div className="product-card-mobile">
+              <img
+                src={ShoeIconBlack}
+                className="shoe-icon-mobile"
+                alt="shoe-icon"
+              />
+              <div className="product-details-container-mobile">
+                <p className="product-name-mobile">ultraboost 1.0</p>
+                <p className="product-color-mobile">color: Black</p>
+                <p className="product-size-mobile">size: 9</p>
+                <p className="product-price-mobile">TOTAL: $190.00</p>
+              </div>
+            </div>
+            <div className="product-card-mobile">
+              <img
+                src={ShoeIconBlack}
+                className="shoe-icon-mobile"
+                alt="shoe-icon"
+              />
+              <div className="product-details-container-mobile">
+                <p className="product-name-mobile">ultraboost 1.0</p>
+                <p className="product-color-mobile">color: Black</p>
+                <p className="product-size-mobile">size: 9</p>
+                <p className="product-price-mobile">TOTAL: $190.00</p>
               </div>
             </div>
             <div className="subtotal-container-mobile"></div>
