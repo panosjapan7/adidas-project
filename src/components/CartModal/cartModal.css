@@ -74,6 +74,7 @@ table {
   width: 100%;
   font-family: "Inter", sans-serif;
   text-align: center;
+  letter-spacing: 0.03rem;
 }
 th {
   font-size: 1rem;
@@ -93,8 +94,15 @@ thead,
 th {
   padding: 5px;
 }
-
 .shoe-icon {
   width: 60px;
   height: auto;
+}
+.subtotal-container {
+  text-align: end;
+}
+.subtotal-container td {
+  padding-top: 20px;
+  padding-right: 20px;
+  font-weight: 600;
 }

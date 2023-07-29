@@ -99,7 +99,10 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <td style={{ paddingBottom: 20 }}>$190.00</td>
               </tr>
               <tr className="hr-bottom">
-                <td style={{ paddingTop: 200 }}></td>
+                <td></td>
+              </tr>
+              <tr className="subtotal-container">
+                <td colSpan={6}>SUBTOTAL: $570.00</td>
               </tr>
             </tbody>
           </table>
