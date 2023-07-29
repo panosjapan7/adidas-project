@@ -4,6 +4,8 @@ import "./App.css";
 import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
 import TopMenu from "./components/TopMenu";
+import CartModal from "./components/CartModal/CartModal";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,6 +17,8 @@ function App() {
   const [scrolledPixels, setScrolledPixels] = useState(80);
   const [lineFlag, setLineFlag] = useState(false);
   const [reachedBottom, setReachedBottom] = useState(false);
+
+  const [cartTagDragged, setCartTagDragged] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -80,7 +84,14 @@ function App() {
 
   return (
     <div>
-      <TopMenu />
+      <TopMenu
+        cartTagDragged={cartTagDragged}
+        setCartTagDragged={setCartTagDragged}
+      />
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+        {cartTagDragged && <CartModal cartTagDragged={cartTagDragged} />}
+      </AnimatePresence>
+
       <div className="container" ref={containerRef}>
         <Home homeSectionRef={homeSectionRef} />
         <ProductPage productSectionRef={productSectionRef} />
