@@ -29,7 +29,7 @@ const TopMenu = ({
       onDrag() {
         this.prevY = this.y;
         console.log(this.y);
-        if (this.y >= 45) {
+        if (this.y >= 40) {
           setCartTagDragged(!cartTagDragged);
         }
       },
