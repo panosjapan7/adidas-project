@@ -153,6 +153,15 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <p className="product-name-mobile">ultraboost 1.0</p>
                 <p className="product-color-mobile">color: Black</p>
                 <p className="product-size-mobile">size: 9</p>
+                <div className="quantity-container">
+                  <span>
+                    <CiCircleMinus className="plus-icon" />
+                  </span>
+                  <p className="quantity-table">1</p>
+                  <span>
+                    <CiCirclePlus className="minus-icon" />
+                  </span>
+                </div>
                 <p className="product-price-mobile">TOTAL: $190.00</p>
               </div>
             </div>
@@ -166,6 +175,15 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <p className="product-name-mobile">ultraboost 1.0</p>
                 <p className="product-color-mobile">color: Black</p>
                 <p className="product-size-mobile">size: 9</p>
+                <div className="quantity-container">
+                  <span>
+                    <CiCircleMinus className="plus-icon" />
+                  </span>
+                  <p className="quantity-table">2</p>
+                  <span>
+                    <CiCirclePlus className="minus-icon" />
+                  </span>
+                </div>
                 <p className="product-price-mobile">TOTAL: $190.00</p>
               </div>
             </div>
@@ -179,6 +197,15 @@ const CartModal = ({ cartTagDragged }: { cartTagDragged: boolean }) => {
                 <p className="product-name-mobile">ultraboost 1.0</p>
                 <p className="product-color-mobile">color: Black</p>
                 <p className="product-size-mobile">size: 9</p>
+                <div className="quantity-container">
+                  <span>
+                    <CiCircleMinus className="plus-icon" />
+                  </span>
+                  <p className="quantity-table">3</p>
+                  <span>
+                    <CiCirclePlus className="minus-icon" />
+                  </span>
+                </div>
                 <p className="product-price-mobile">TOTAL: $190.00</p>
               </div>
             </div>

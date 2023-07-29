@@ -196,6 +196,11 @@ th {
     font-weight: 300;
     margin-bottom: 10px;
   }
+  .quantity-container {
+    justify-content: flex-start;
+    text-align: center;
+    margin-bottom: 10px;
+  }
   .product-price-mobile {
     font-weight: 500;
     font-size: 0.95rem;
