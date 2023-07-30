@@ -29,11 +29,10 @@
 /* TOP MENU */
 .menu-wrapper {
   position: absolute;
-  z-index: 10;
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 0 100px 0 0;
+  padding: 0 10% 0 0;
   z-index: 45;
 }
 
@@ -93,6 +92,117 @@ a:hover::before,
   cursor: pointer;
   position: relative;
 }
+.mobile-menu-wrapper {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .menu-container {
+    display: none;
+  }
+  .mobile-menu-wrapper {
+    width: 50px;
+    height: 50px;
+    z-index: 300;
+    margin: 15px 0px 0px 5%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+  }
+  .mobile-menu-icon-container {
+  }
+  .visuallyHidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+  .hamburger {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  .hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: maroon;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+  }
+
+  .bar1 {
+    top: 0;
+  }
+
+  .bar2,
+  .bar3 {
+    top: 13.5px;
+  }
+
+  .bar3 {
+    right: 0;
+  }
+
+  .bar4 {
+    bottom: 0;
+  }
+  /* HAMBURGER 3 */
+
+  .hamburger3 .bar1 {
+    transform-origin: 5%;
+  }
+
+  .hamburger3 .bar4 {
+    transform-origin: 5%;
+  }
+
+  .checkbox3:checked + label > .hamburger3 > .bar1 {
+    transform: rotate(45deg);
+    height: 3px;
+    width: 42px;
+  }
+
+  .checkbox3:checked + label > .hamburger3 > .bar3 {
+    transform: rotate(45deg);
+    height: 3px;
+    background-color: transparent;
+  }
+
+  .checkbox3:checked + label > .hamburger3 > .bar2 {
+    transform: rotate(-45deg);
+    height: 3px;
+    background-color: transparent;
+  }
+
+  .checkbox3:checked + label > .hamburger3 > .bar4 {
+    transform: rotate(-45deg);
+    height: 3px;
+    width: 42px;
+  }
+}
+
+/* MOBILE MENU BURGER*/
+
+/* MOBILE MENU DRAG TAG*/
+/* .mobile-menu-wrapper {
+  width: 65px;
+  height: 75px;
+  background-color: black;
+  z-index: 300;
+  margin: 0px 0px 0px 10%;
+  border-radius: 0 0 5px 5px;
+}
+.mobile-menu-icon-container {
+} */
 
 /* CART DESKTOP */
 .cart-desktop-container {
@@ -108,6 +218,7 @@ a:hover::before,
   transition: height 0.2s ease-in-out;
   padding-bottom: 17px;
   margin-top: -100px;
+  z-index: 100;
 }
 
 .handbag-icon {

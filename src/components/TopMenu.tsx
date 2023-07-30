@@ -47,6 +47,26 @@ const TopMenu = ({
 
   return (
     <div className="menu-wrapper">
+      {/* <div className="mobile-menu-wrapper">
+        <div className="mobile-menu-icon-container"></div>
+      </div> */}
+      <div className="mobile-menu-wrapper">
+        <input
+          type="checkbox"
+          id="checkbox3"
+          className="checkbox3 visuallyHidden"
+        />
+        <label htmlFor="checkbox3">
+          <div className="hamburger hamburger3">
+            <span className="bar bar1"></span>
+            <span className="bar bar2"></span>
+            <span className="bar bar3"></span>
+            <span className="bar bar4"></span>
+          </div>
+        </label>
+
+        <div className="mobile-menu-icon-container"></div>
+      </div>
       <div className="menu-container">
         <img src={adidasLogo} className="adidas-logo" alt="adidas logo" />
         <p className="text-links about-link">about</p>
