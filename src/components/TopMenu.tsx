@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
-import { motion } from "framer-motion";
 import { BsHandbag } from "react-icons/bs";
 import "./components.css";
 import adidasLogo from "../assets/adidas-logo-white.png";
-import CartModal from "./CartModal/CartModal";
 
 gsap.registerPlugin(Draggable);
 
