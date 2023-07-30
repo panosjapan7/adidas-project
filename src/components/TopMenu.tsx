@@ -15,6 +15,11 @@ const TopMenu = ({
   setCartTagDragged: (cartTagDragge: boolean) => void;
 }) => {
   const [cartHeight, setCartHeight] = useState(175);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setShowMobileMenu(e.target.checked);
+  };
 
   useEffect(() => {
     Draggable.create(".cart-desktop-container", {
@@ -55,6 +60,7 @@ const TopMenu = ({
           type="checkbox"
           id="checkbox3"
           className="checkbox3 visuallyHidden"
+          onChange={handleInputChange}
         />
         <label htmlFor="checkbox3">
           <div className="hamburger hamburger3">
