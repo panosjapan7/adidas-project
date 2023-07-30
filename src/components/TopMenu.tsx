@@ -4,6 +4,7 @@ import Draggable from "gsap/Draggable";
 import { BsHandbag } from "react-icons/bs";
 import "./components.css";
 import adidasLogo from "../assets/adidas-logo-white.png";
+import adidasLogoSmall from "../assets/adidas-logo-small-black.png";
 
 gsap.registerPlugin(Draggable);
 
@@ -19,6 +20,17 @@ const TopMenu = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setShowMobileMenu(e.target.checked);
+  };
+
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLParagraphElement>
+  ) => {
+    setShowMobileMenu(false);
+
+    const checkbox = document.getElementById("checkbox3") as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = false;
+    }
   };
 
   useEffect(() => {
@@ -74,7 +86,31 @@ const TopMenu = ({
       {showMobileMenu && (
         <div
           className={`mobile-menu-contents ${showMobileMenu ? "visible" : ""}`}
-        ></div>
+        >
+          <div className="mobile-menu-options">
+            <img
+              src={adidasLogoSmall}
+              className="adidas-logo-small-black"
+              alt="adidas logo"
+            />
+            <p
+              className="mobile-menu-option no-hover-effect"
+              onClick={handleAnchorClick}
+            >
+              ABOUT
+            </p>
+
+            <a
+              className="mobile-menu-option no-hover-effect"
+              href="https://github.com/panosjapan7/adidas-project"
+              target="_blank"
+              rel="noreferrer"
+              onClick={handleAnchorClick}
+            >
+              GITHUB
+            </a>
+          </div>
+        </div>
       )}
 
       <div className="menu-container">
@@ -85,7 +121,7 @@ const TopMenu = ({
           target="_blank"
           rel="noreferrer"
         >
-          <p className="text-links">github</p>
+          <p className="text-links github-link">github</p>
         </a>
       </div>
       <div

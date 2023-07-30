@@ -96,6 +96,10 @@ a:hover::before,
   display: none;
 }
 
+.mobile-menu-contents {
+  display: none;
+}
+
 @media (max-width: 400px) {
   .menu-container {
     display: none;
@@ -186,7 +190,9 @@ a:hover::before,
     width: 40px;
   }
 
+  /* MOBILE MENU CONTENTS */
   .mobile-menu-contents {
+    display: block;
     background-color: #ffffff;
     width: 100vw;
     height: 100vh;
@@ -198,8 +204,34 @@ a:hover::before,
     transition: left 3.5s ease-in-out;
   }
 
-  .mobile-menu-contents.visible {
-    /* left: 100px; */
+  .mobile-menu-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 40vh;
+    z-index: 300;
+    position: relative;
+    padding-top: 130px;
+  }
+  .adidas-logo-small-black {
+    width: 100px;
+    height: auto;
+    padding-bottom: 20px;
+    /* position: absolute; */
+    /* bottom: 10px; */
+  }
+  .mobile-menu-option {
+    color: black;
+    font-family: "Tektur", sans-serif;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .no-hover-effect:hover {
+    transform: none;
+    background-color: transparent;
   }
 }
 
