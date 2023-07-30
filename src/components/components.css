@@ -108,8 +108,6 @@ a:hover::before,
     border-radius: 5px;
     display: block;
   }
-  .mobile-menu-icon-container {
-  }
   .visuallyHidden {
     position: absolute;
     overflow: hidden;
@@ -126,6 +124,7 @@ a:hover::before,
     width: 30px;
     height: 30px;
     position: relative;
+    cursor: pointer;
   }
   .hamburger .bar {
     padding: 0;
@@ -185,6 +184,22 @@ a:hover::before,
     transform: rotate(-45deg);
     height: 3px;
     width: 40px;
+  }
+
+  .mobile-menu-contents {
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    transition: height 0.5s ease-in-out;
+    z-index: 99;
+    position: absolute;
+    border: 6px solid black;
+    border-radius: 10px;
+    transition: left 3.5s ease-in-out;
+  }
+
+  .mobile-menu-contents.visible {
+    /* left: 100px; */
   }
 }
 

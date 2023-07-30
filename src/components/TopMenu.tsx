@@ -70,9 +70,13 @@ const TopMenu = ({
             <span className="bar bar4"></span>
           </div>
         </label>
-
-        <div className="mobile-menu-icon-container"></div>
       </div>
+      {showMobileMenu && (
+        <div
+          className={`mobile-menu-contents ${showMobileMenu ? "visible" : ""}`}
+        ></div>
+      )}
+
       <div className="menu-container">
         <img src={adidasLogo} className="adidas-logo" alt="adidas logo" />
         <p className="text-links about-link">about</p>
