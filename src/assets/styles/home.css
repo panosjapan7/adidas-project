@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap");
+
+.homeSection {
+  background-color: rgb(241, 241, 241, 1);
+}
+.ultraboost-text-container,
+.ultraboost-empty-text-container {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 32%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.ultraboost-text-container {
+  z-index: 5;
+}
+.ultraboost-text,
+.ultraboost-empty-text {
+  font-family: "Tektur", "sans-serif";
+  font-weight: 500;
+  font-size: 10rem;
+  color: black;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+.ultraboost-empty-text-container {
+  z-index: 20;
+}
+.ultraboost-empty-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
+  /* -webkit-text-stroke-color: red; */
+  z-index: 20;
+}
+.shoe-hero-desktop-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  padding-right: 10%;
+}
+.shoe-hero-desktop {
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: translateY(-160px) rotate(-33deg); /* Start 160px higher */
+  z-index: 6;
+  animation: slideInFromTop 1s forwards;
+}
+@keyframes slideInFromTop {
+  to {
+    transform: translateY(0) rotate(-33deg); /* Animate translateY to 0, moving it downwards */
+    opacity: 1;
+  }
+}
+.shoe-hero-shadow-desktop {
+  max-width: 750px;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  z-index: 5;
+  margin: 2% 0 0 13%;
+  padding-right: 100px;
+  animation: fadeIn 1.5s forwards;
+}
+
+@media (min-width: 1700px) {
+  .shoe-hero-desktop {
+    margin-bottom: 3%;
+  }
+  .shoe-hero-shadow-desktop {
+    margin: 1% 0 0 10%;
+  }
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 15rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1699px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 11rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 770px) and (max-width: 899px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 7rem;
+  }
+}
+@media (min-width: 615px) and (max-width: 769px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 7rem;
+  }
+}
+@media (min-width: 510px) and (max-width: 614px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 6rem;
+  }
+}
+.ultraboost-text-mobile,
+.ultraboost-text-empty-mobile {
+  display: none;
+}
+@media (min-width: 10px) and (max-width: 509px) {
+  .homeSection {
+    /* background-image: radial-gradient(#000000 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-color: #ffffff; */
+  }
+  .ultraboost-text-mobile,
+  .ultraboost-text-empty-mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vh;
+    position: fixed;
+    margin-top: 200px;
+
+    font-family: "Tektur", "sans-serif";
+    font-size: 6rem;
+    transform: rotate(90deg);
+    font-weight: 400;
+    cursor: default;
+  }
+  .ultraboost-text-mobile {
+    z-index: 4;
+  }
+  .ultraboost-text-empty-mobile {
+    z-index: 7;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
+  }
+  .ultraboost-text-container,
+  .ultraboost-empty-text-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vh;
+    position: fixed;
+    margin-top: 200px;
+    z-index: 400;
+    transform: rotate(90deg);
+  }
+
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 6rem;
+    transform: rotate(90deg);
+    font-weight: 400;
+  }
+}
+@media (max-width: 1200px) {
+  .shoe-hero-desktop {
+    margin-bottom: 5%;
+  }
+  .shoe-hero-shadow-desktop {
+    margin: 1% 0 0 16%;
+  }
+}
+@media (max-width: 1000px) {
+  .shoe-hero-desktop-container {
+    gap: 3%;
+  }
+  .shoe-hero-desktop {
+    margin-bottom: 7%;
+  }
+}
+@media (max-width: 500px) {
+  .shoe-hero-desktop-container {
+    gap: 1%;
+  }
+  .shoe-hero-desktop {
+    margin-bottom: 8%;
+  }
+  .shoe-hero-shadow-desktop {
+    margin: 1% 0 0 20%;
+    padding-right: 5%;
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import { BsHandbag } from "react-icons/bs";
-import "./components.css";
-import adidasLogo from "../assets/adidas-logo-white.png";
-import adidasLogoSmall from "../assets/adidas-logo-small-black.png";
+import "../assets/styles/topBar.css";
+import adidasLogo from "../assets/images/adidas-logo-white.png";
+import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
 
 gsap.registerPlugin(Draggable);
 
@@ -43,7 +43,6 @@ const TopMenu = ({
       edgeResistance: 0.85,
       onDrag() {
         this.prevY = this.y;
-        console.log(this.y);
         if (this.y >= 40) {
           setCartTagDragged(!cartTagDragged);
         }

@@ -1,19 +1,42 @@
 import React from "react";
-import "../App.css";
+import "../assets/styles/home.css";
+import ShoeHeroDesktop from "../assets/images/shoe-hero-desktop.svg";
+import ShoeHeroShadowDesktop from "../assets/images/shoe-hero-shadow-desktop.svg";
 
 const Home = ({
   homeSectionRef,
+  isProductSectionVisible,
 }: {
   homeSectionRef: React.RefObject<HTMLDivElement>;
+  isProductSectionVisible: boolean | undefined;
 }) => {
   return (
     <section id="homeSection" className="homeSection">
-      <h2>Home</h2>
-      <p ref={homeSectionRef}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
-        obcaecati sunt, aliquam at rerum accusantium ea suscipit necessitatibus
-        doloremque vero!
-      </p>
+      {!isProductSectionVisible && (
+        <p className="ultraboost-text-empty-mobile">ultraboost 1.0</p>
+      )}
+      {!isProductSectionVisible && (
+        <p className="ultraboost-text-mobile">ultraboost 1.0</p>
+      )}
+
+      <div className="ultraboost-text-container">
+        <p className="ultraboost-text">ultraboost 1.0</p>
+      </div>
+      <div className="ultraboost-empty-text-container">
+        <p className="ultraboost-empty-text">ultraboost 1.0</p>
+      </div>
+      <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
+        <img
+          src={ShoeHeroDesktop}
+          className="shoe-hero-desktop"
+          alt="adidas ultraboost shoe"
+        />
+        <img
+          src={ShoeHeroShadowDesktop}
+          className="shoe-hero-shadow-desktop"
+          alt="shoe shadow"
+        />
+      </div>
     </section>
   );
 };

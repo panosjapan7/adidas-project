@@ -93,7 +93,10 @@ function App() {
       </AnimatePresence>
 
       <div className="container" ref={containerRef}>
-        <Home homeSectionRef={homeSectionRef} />
+        <Home
+          homeSectionRef={homeSectionRef}
+          isProductSectionVisible={isProductSectionVisible}
+        />
         <ProductPage productSectionRef={productSectionRef} />
       </div>
 
