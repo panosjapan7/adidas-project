@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { SlArrowUp, SlArrowDown } from "react-icons/sl";
-import "./components.css";
+import "../assets/styles/topBar.css";
 
 gsap.registerPlugin(ScrollTrigger);
 

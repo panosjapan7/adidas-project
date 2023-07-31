@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import { BsHandbag } from "react-icons/bs";
-import "./components.css";
+import "../assets/styles/topBar.css";
 import adidasLogo from "../assets/images/adidas-logo-white.png";
 import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
 
