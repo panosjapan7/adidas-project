@@ -8,21 +8,50 @@
   height: 100%;
   justify-content: center;
   align-items: center;
+  padding-top: 5%;
+  padding-right: 10%;
 }
 .shoe-hero-desktop {
   max-width: 750px;
   width: 100%;
   height: auto;
-  transform: rotate(-33deg);
+  /* transform: rotate(-33deg); */
+  transform: translateY(-160px) rotate(-33deg); /* Start 100px higher */
   margin-bottom: 50px;
-  padding-right: 100px;
+  /* padding-right: 100px; */
   z-index: 10;
+  animation: slideInFromTop 1s forwards; /* Use the slideInFromTop animation */
+}
+@keyframes slideInFromTop {
+  to {
+    transform: translateY(0) rotate(-33deg); /* Animate translateY to 0, moving it downwards */
+  }
 }
 .shoe-hero-shadow-desktop {
   max-width: 750px;
   width: 100%;
   height: auto;
+  opacity: 0;
   z-index: 5;
-  margin: 2% 0 0 140px;
+  margin: 2% 0 0 10%;
   padding-right: 100px;
+  animation: fadeIn 1.5s forwards;
+}
+@media (max-width: 500px) {
+  .shoe-hero-desktop {
+    margin-bottom: 50px;
+    /* padding-right: 0px; */
+  }
+  .shoe-hero-shadow-desktop {
+    max-width: 750px;
+    width: 100%;
+    margin: 1% 0 0 20%;
+    padding-right: 100px;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
