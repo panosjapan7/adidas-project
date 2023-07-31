@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./cartModal.css";
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 import Backdrop from "./Backdrop";
-import ShoeIconBlack from "../../assets/shoe-icon-black.png";
+import ShoeIconBlack from "../../assets/images/shoe-icon-black.png";
 
 const dropIn = {
   hidden: {

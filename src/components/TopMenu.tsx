@@ -3,8 +3,8 @@ import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import { BsHandbag } from "react-icons/bs";
 import "./components.css";
-import adidasLogo from "../assets/adidas-logo-white.png";
-import adidasLogoSmall from "../assets/adidas-logo-small-black.png";
+import adidasLogo from "../assets/images/adidas-logo-white.png";
+import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
 
 gsap.registerPlugin(Draggable);
 
