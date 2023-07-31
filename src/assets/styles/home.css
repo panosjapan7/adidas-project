@@ -33,10 +33,21 @@
   height: auto;
   opacity: 0;
   z-index: 5;
-  margin: 2% 0 0 10%;
+  margin: 2% 0 0 23%;
   padding-right: 100px;
   animation: fadeIn 1.5s forwards;
 }
+@media (min-width: 1200px) {
+  .shoe-hero-shadow-desktop {
+    margin: 1% 0 0 16%;
+  }
+}
+@media (min-width: 1700px) {
+  .shoe-hero-shadow-desktop {
+    margin: 1% 0 0 10%;
+  }
+}
+
 @media (max-width: 500px) {
   .shoe-hero-desktop {
     margin-bottom: 50px;
