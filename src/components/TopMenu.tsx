@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
-import { motion } from "framer-motion";
 import { BsHandbag } from "react-icons/bs";
 import "./components.css";
 import adidasLogo from "../assets/adidas-logo-white.png";
-import CartModal from "./CartModal/CartModal";
+import adidasLogoSmall from "../assets/adidas-logo-small-black.png";
 
 gsap.registerPlugin(Draggable);
 
@@ -17,6 +16,22 @@ const TopMenu = ({
   setCartTagDragged: (cartTagDragge: boolean) => void;
 }) => {
   const [cartHeight, setCartHeight] = useState(175);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setShowMobileMenu(e.target.checked);
+  };
+
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLParagraphElement>
+  ) => {
+    setShowMobileMenu(false);
+
+    const checkbox = document.getElementById("checkbox3") as HTMLInputElement;
+    if (checkbox) {
+      checkbox.checked = false;
+    }
+  };
 
   useEffect(() => {
     Draggable.create(".cart-desktop-container", {
@@ -49,6 +64,54 @@ const TopMenu = ({
 
   return (
     <div className="menu-wrapper">
+      {/* <div className="mobile-menu-wrapper">
+        <div className="mobile-menu-icon-container"></div>
+      </div> */}
+      <div className="mobile-menu-wrapper">
+        <input
+          type="checkbox"
+          id="checkbox3"
+          className="checkbox3 visuallyHidden"
+          onChange={handleInputChange}
+        />
+        <label htmlFor="checkbox3">
+          <div className="hamburger hamburger3">
+            <span className="bar bar1"></span>
+            <span className="bar bar2"></span>
+            <span className="bar bar3"></span>
+            <span className="bar bar4"></span>
+          </div>
+        </label>
+      </div>
+      {showMobileMenu && (
+        <div
+          className={`mobile-menu-contents ${showMobileMenu ? "visible" : ""}`}
+        >
+          <div className="mobile-menu-options">
+            <img
+              src={adidasLogoSmall}
+              className="adidas-logo-small-black"
+              alt="adidas logo"
+            />
+            <p
+              className="mobile-menu-option no-hover-effect"
+              onClick={handleAnchorClick}
+            >
+              ABOUT
+            </p>
+
+            <a
+              className="mobile-menu-option no-hover-effect"
+              href="https://github.com/panosjapan7/adidas-project"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GITHUB
+            </a>
+          </div>
+        </div>
+      )}
+
       <div className="menu-container">
         <img src={adidasLogo} className="adidas-logo" alt="adidas logo" />
         <p className="text-links about-link">about</p>
@@ -57,13 +120,10 @@ const TopMenu = ({
           target="_blank"
           rel="noreferrer"
         >
-          <p className="text-links">github</p>
+          <p className="text-links github-link">github</p>
         </a>
       </div>
-      <div
-        className="cart-desktop-container"
-        style={{ height: cartHeight, zIndex: 100 }}
-      >
+      <div className="cart-desktop-container" style={{ height: cartHeight }}>
         <BsHandbag className="handbag-icon" />
       </div>
     </div>
