@@ -105,7 +105,6 @@ const TopMenu = ({
               href="https://github.com/panosjapan7/adidas-project"
               target="_blank"
               rel="noreferrer"
-              onClick={handleAnchorClick}
             >
               GITHUB
             </a>
@@ -124,10 +123,7 @@ const TopMenu = ({
           <p className="text-links github-link">github</p>
         </a>
       </div>
-      <div
-        className="cart-desktop-container"
-        style={{ height: cartHeight, zIndex: 100 }}
-      >
+      <div className="cart-desktop-container" style={{ height: cartHeight }}>
         <BsHandbag className="handbag-icon" />
       </div>
     </div>

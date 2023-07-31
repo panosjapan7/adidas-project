@@ -26,7 +26,7 @@
   height: 80px;
 }
 
-/* TOP MENU */
+/* TOP MENU DESKTOP */
 .menu-wrapper {
   position: absolute;
   display: flex;
@@ -218,8 +218,6 @@ a:hover::before,
     width: 100px;
     height: auto;
     padding-bottom: 20px;
-    /* position: absolute; */
-    /* bottom: 10px; */
   }
   .mobile-menu-option {
     color: black;
@@ -228,24 +226,11 @@ a:hover::before,
     font-weight: 400;
     cursor: pointer;
   }
-
-  .no-hover-effect:hover {
+  .mobile-menu-option::before {
     transform: none;
     background-color: transparent;
   }
 }
-
-/* MOBILE MENU DRAG TAG*/
-/* .mobile-menu-wrapper {
-  width: 65px;
-  height: 75px;
-  background-color: black;
-  z-index: 300;
-  margin: 0px 0px 0px 10%;
-  border-radius: 0 0 5px 5px;
-}
-.mobile-menu-icon-container {
-} */
 
 /* CART DESKTOP */
 .cart-desktop-container {
