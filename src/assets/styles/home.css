@@ -5,9 +5,6 @@
 }
 .ultraboost-text-container,
 .ultraboost-empty-text-container {
-  font-family: "Tektur", "sans-serif";
-  font-weight: 500;
-  font-size: 10rem;
   height: 100vh;
   width: 100vw;
 
@@ -22,10 +19,15 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  z-index: 10;
+}
+.ultraboost-text-container {
+  z-index: 5;
 }
 .ultraboost-text,
 .ultraboost-empty-text {
+  font-family: "Tektur", "sans-serif";
+  font-weight: 500;
+  font-size: 10rem;
   color: black;
   z-index: 10;
   position: absolute;
@@ -43,6 +45,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
+  /* -webkit-text-stroke-color: red; */
   z-index: 20;
 }
 .shoe-hero-desktop-container {
@@ -62,7 +65,7 @@
   height: auto;
   opacity: 0;
   transform: translateY(-160px) rotate(-33deg); /* Start 160px higher */
-  z-index: 10;
+  z-index: 6;
   animation: slideInFromTop 1s forwards;
 }
 @keyframes slideInFromTop {
@@ -88,6 +91,94 @@
   }
   .shoe-hero-shadow-desktop {
     margin: 1% 0 0 10%;
+  }
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 15rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1699px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 11rem;
+  }
+}
+@media (min-width: 900px) and (max-width: 1099px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 770px) and (max-width: 899px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 7rem;
+  }
+}
+@media (min-width: 615px) and (max-width: 769px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 7rem;
+  }
+}
+@media (min-width: 510px) and (max-width: 614px) {
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 6rem;
+  }
+}
+.ultraboost-text-mobile,
+.ultraboost-text-empty-mobile {
+  display: none;
+}
+@media (min-width: 10px) and (max-width: 509px) {
+  .homeSection {
+    /* background-image: radial-gradient(#000000 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-color: #ffffff; */
+  }
+  .ultraboost-text-mobile,
+  .ultraboost-text-empty-mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vh;
+    position: fixed;
+    margin-top: 200px;
+
+    font-family: "Tektur", "sans-serif";
+    font-size: 6rem;
+    transform: rotate(90deg);
+    font-weight: 400;
+    cursor: default;
+  }
+  .ultraboost-text-mobile {
+    z-index: 4;
+  }
+  .ultraboost-text-empty-mobile {
+    z-index: 7;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
+  }
+  .ultraboost-text-container,
+  .ultraboost-empty-text-container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vh;
+    position: fixed;
+    margin-top: 200px;
+    z-index: 400;
+    transform: rotate(90deg);
+  }
+
+  .ultraboost-text,
+  .ultraboost-empty-text {
+    font-size: 6rem;
+    transform: rotate(90deg);
+    font-weight: 400;
   }
 }
 @media (max-width: 1200px) {

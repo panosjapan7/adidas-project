@@ -5,11 +5,20 @@ import ShoeHeroShadowDesktop from "../assets/images/shoe-hero-shadow-desktop.svg
 
 const Home = ({
   homeSectionRef,
+  isProductSectionVisible,
 }: {
   homeSectionRef: React.RefObject<HTMLDivElement>;
+  isProductSectionVisible: boolean | undefined;
 }) => {
   return (
     <section id="homeSection" className="homeSection">
+      {!isProductSectionVisible && (
+        <p className="ultraboost-text-empty-mobile">ultraboost 1.0</p>
+      )}
+      {!isProductSectionVisible && (
+        <p className="ultraboost-text-mobile">ultraboost 1.0</p>
+      )}
+
       <div className="ultraboost-text-container">
         <p className="ultraboost-text">ultraboost 1.0</p>
       </div>
