@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import "../assets/styles/home.css";
 import ShoeHeroDesktop from "../assets/images/shoe-hero-desktop.svg";
 import ShoeHeroShadowDesktop from "../assets/images/shoe-hero-shadow-desktop.svg";
