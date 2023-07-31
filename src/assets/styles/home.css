@@ -16,18 +16,15 @@
   max-width: 750px;
   width: 100%;
   height: auto;
-  /* transform: rotate(-33deg); */
-  transform: translateY(-160px) rotate(-33deg); /* Start 100px higher */
-
-  /* margin-bottom: 3%; */
-
-  /* padding-right: 100px; */
+  opacity: 0;
+  transform: translateY(-160px) rotate(-33deg); /* Start 160px higher */
   z-index: 10;
-  animation: slideInFromTop 1s forwards; /* Use the slideInFromTop animation */
+  animation: slideInFromTop 1s forwards;
 }
 @keyframes slideInFromTop {
   to {
     transform: translateY(0) rotate(-33deg); /* Animate translateY to 0, moving it downwards */
+    opacity: 1;
   }
 }
 .shoe-hero-shadow-desktop {
