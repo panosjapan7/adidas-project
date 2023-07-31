@@ -10,6 +10,12 @@ const Home = ({
 }) => {
   return (
     <section id="homeSection" className="homeSection">
+      <div className="ultraboost-text-container">
+        <p className="ultraboost-text">ultraboost 1.0</p>
+      </div>
+      <div className="ultraboost-empty-text-container">
+        <p className="ultraboost-empty-text">ultraboost 1.0</p>
+      </div>
       <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
         <img
           src={ShoeHeroDesktop}

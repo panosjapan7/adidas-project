@@ -1,5 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap");
+
 .homeSection {
   background-color: rgb(241, 241, 241, 1);
+}
+.ultraboost-text-container,
+.ultraboost-empty-text-container {
+  font-family: "Tektur", "sans-serif";
+  font-weight: 500;
+  font-size: 10rem;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 32%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+.ultraboost-text,
+.ultraboost-empty-text {
+  color: black;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+.ultraboost-empty-text-container {
+  z-index: 20;
+}
+.ultraboost-empty-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
+  z-index: 20;
 }
 .shoe-hero-desktop-container {
   display: flex;
