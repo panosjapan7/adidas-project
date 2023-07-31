@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import ShoeHeroDesktop from "../assets/shoe-hero-desktop.svg";
+import ShoeHeroShadowDesktop from "../assets/shoe-hero-shadow-desktop.svg";
 
 const Home = ({
   homeSectionRef,
@@ -8,12 +10,18 @@ const Home = ({
 }) => {
   return (
     <section id="homeSection" className="homeSection">
-      <h2>Home</h2>
-      <p ref={homeSectionRef}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
-        obcaecati sunt, aliquam at rerum accusantium ea suscipit necessitatibus
-        doloremque vero!
-      </p>
+      <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
+        <img
+          src={ShoeHeroDesktop}
+          className="shoe-hero-desktop"
+          alt="adidas ultraboost shoe"
+        />
+        <img
+          src={ShoeHeroShadowDesktop}
+          className="shoe-hero-shadow-desktop"
+          alt="shoe shadow"
+        />
+      </div>
     </section>
   );
 };
