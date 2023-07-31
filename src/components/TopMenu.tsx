@@ -43,7 +43,6 @@ const TopMenu = ({
       edgeResistance: 0.85,
       onDrag() {
         this.prevY = this.y;
-        console.log(this.y);
         if (this.y >= 40) {
           setCartTagDragged(!cartTagDragged);
         }
