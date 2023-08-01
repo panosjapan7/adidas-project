@@ -59,6 +59,7 @@
   height: 100%;
   padding-top: 5%;
   padding-right: 10%;
+  position: relative;
 }
 .shoe-hero-desktop {
   max-width: 750px;
@@ -109,17 +110,31 @@
   .ultraboost-empty-text {
     font-size: 8rem;
   }
+  .ultraboost-text-container,
+  .ultraboost-empty-text-container {
+    top: 40%;
+    bottom: 0;
+    left: 50%;
+  }
 }
 @media (min-width: 770px) and (max-width: 899px) {
   .ultraboost-text,
   .ultraboost-empty-text {
     font-size: 7rem;
   }
+  .ultraboost-text-container,
+  .ultraboost-empty-text-container {
+    top: 40%;
+  }
 }
 @media (min-width: 615px) and (max-width: 769px) {
   .ultraboost-text,
   .ultraboost-empty-text {
     font-size: 7rem;
+  }
+  .ultraboost-text-container,
+  .ultraboost-empty-text-container {
+    top: 40%;
   }
 }
 @media (min-width: 501px) and (max-width: 614px) {
@@ -132,7 +147,7 @@
 .ultraboost-text-empty-mobile {
   display: none;
 }
-@media (min-width: 351px) and (max-width: 500px) {
+@media (min-width: 376px) and (max-width: 500px) {
   /* .ultraboost-text-mobile,
   .ultraboost-text-empty-mobile {
     display: block;
@@ -162,17 +177,17 @@
   .ultraboost-text-container,
   .ultraboost-empty-text-container {
     /* display: none; */
-    margin-top: 20%;
+    margin-top: 10%;
   }
   .ultraboost-text,
   .ultraboost-empty-text {
     font-size: 4rem;
   }
 }
-@media (min-width: 326px) and (max-width: 350px) {
+@media (min-width: 326px) and (max-width: 375px) {
   .ultraboost-text-container,
   .ultraboost-empty-text-container {
-    margin-top: 30%;
+    margin-top: 20%;
   }
   .ultraboost-text,
   .ultraboost-empty-text {
@@ -182,7 +197,7 @@
 @media (min-width: 276px) and (max-width: 325px) {
   .ultraboost-text-container,
   .ultraboost-empty-text-container {
-    margin-top: 35%;
+    margin-top: 20%;
   }
   .ultraboost-text,
   .ultraboost-empty-text {
