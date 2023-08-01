@@ -1,0 +1,21 @@
+.productSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(241, 241, 241, 1);
+}
+.left-column,
+.right-column {
+  width: 50vw;
+  /* height: 100vh; */
+}
+.left-column {
+  /* border: 1px solid red; */
+}
+.right-column {
+  /* border: 1px solid blue; */
+  background-color: #ffff;
+  height: 100vh;
+}
