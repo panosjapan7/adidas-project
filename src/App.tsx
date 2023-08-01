@@ -39,6 +39,8 @@ function App() {
   useEffect(() => {
     const container = containerRef.current;
 
+    console.log(container?.scrollTop);
+
     const handleScroll = () => {
       if (
         scrolledPixels <= 80 &&
@@ -47,14 +49,17 @@ function App() {
         !isProductSectionVisible &&
         !lineFlag
       ) {
+        console.log(1);
         setScrolledPixels((prev) => prev - 1.5);
         setLineFlag(false);
       }
       if (isProductSectionVisible && !lineFlag && !reachedBottom) {
+        console.log(2);
         setScrolledPixels(80);
         setLineFlag(true);
       }
-      if (container?.scrollTop! > 745) {
+      if (container?.scrollTop! > 350) {
+        console.log(3);
         setLineFlag(false);
         setReachedBottom(true);
       }
@@ -63,6 +68,7 @@ function App() {
       //   setScrolledPixels((prev) => prev - 1.5);
       // }
       if (container?.scrollTop! < 100) {
+        console.log(4);
         setScrolledPixels(80);
         setReachedBottom(false);
       }
@@ -93,10 +99,7 @@ function App() {
       </AnimatePresence>
 
       <div className="container" ref={containerRef}>
-        <Home
-          homeSectionRef={homeSectionRef}
-          isProductSectionVisible={isProductSectionVisible}
-        />
+        <Home homeSectionRef={homeSectionRef} />
         <ProductPage productSectionRef={productSectionRef} />
       </div>
 
