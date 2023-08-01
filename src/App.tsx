@@ -49,7 +49,6 @@ function App() {
         !isProductSectionVisible &&
         !lineFlag
       ) {
-        console.log(1);
         setScrolledPixels((prev) => prev - 1.5);
         setLineFlag(false);
       }
@@ -59,7 +58,6 @@ function App() {
         setLineFlag(true);
       }
       if (container?.scrollTop! > 350) {
-        console.log(3);
         setLineFlag(false);
         setReachedBottom(true);
       }
@@ -68,7 +66,6 @@ function App() {
       //   setScrolledPixels((prev) => prev - 1.5);
       // }
       if (container?.scrollTop! < 100) {
-        console.log(4);
         setScrolledPixels(80);
         setReachedBottom(false);
       }
@@ -100,7 +97,10 @@ function App() {
 
       <div className="container" ref={containerRef}>
         <Home homeSectionRef={homeSectionRef} shoeColor={shoeColor} />
-        <ProductPage productSectionRef={productSectionRef} />
+        <ProductPage
+          productSectionRef={productSectionRef}
+          isProductSectionVisible={isProductSectionVisible}
+        />
       </div>
 
       <div className="navivationArrows-wrapper">
