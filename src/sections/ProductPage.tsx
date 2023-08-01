@@ -15,7 +15,7 @@ const ProductPage = ({
           minima dicta odio iusto itaque eos voluptates, ipsa libero voluptatem?
         </p>
       </div>
-      <div className="right-column"></div>
+      <div className="right-column" id="productSection"></div>
     </section>
   );
 };
