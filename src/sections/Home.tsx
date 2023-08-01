@@ -5,33 +5,28 @@ import ShoeHeroShadowDesktop from "../assets/images/shoe-hero-shadow-desktop.svg
 
 const Home = ({
   homeSectionRef,
-  isProductSectionVisible,
 }: {
   homeSectionRef: React.RefObject<HTMLDivElement>;
-  isProductSectionVisible: boolean | undefined;
 }) => {
   return (
     <section id="homeSection" className="homeSection">
-      {!isProductSectionVisible && (
-        <p className="ultraboost-text-empty-mobile">ultraboost 1.0</p>
-      )}
-      {!isProductSectionVisible && (
-        <p className="ultraboost-text-mobile">ultraboost 1.0</p>
-      )}
-
-      {/* <div className="ultraboost-text-container">
-        <p className="ultraboost-text">ultraboost 1.0</p>
+      <div className="ultraboost-text-container" ref={homeSectionRef}>
+        <p className="ultraboost-text" ref={homeSectionRef}>
+          ultraboost 1.0
+        </p>
       </div>
-      <div className="ultraboost-empty-text-container">
-        <p className="ultraboost-empty-text">ultraboost 1.0</p>
-      </div> */}
+      <div className="ultraboost-empty-text-container" ref={homeSectionRef}>
+        <p className="ultraboost-empty-text" ref={homeSectionRef}>
+          ultraboost 1.0
+        </p>
+      </div>
       <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
-        <div className="ultraboost-text-container">
+        {/* <div className="ultraboost-text-container" ref={homeSectionRef}>
           <p className="ultraboost-text">ultraboost 1.0</p>
         </div>
-        <div className="ultraboost-empty-text-container">
+        <div className="ultraboost-empty-text-container" ref={homeSectionRef}>
           <p className="ultraboost-empty-text">ultraboost 1.0</p>
-        </div>
+        </div> */}
         <img
           src={ShoeHeroDesktop}
           className="shoe-hero-desktop"
