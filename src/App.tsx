@@ -14,6 +14,8 @@ function App() {
   const [isProductSectionVisible, setIsProductSectionVisible] =
     useState<boolean>();
   const [isHomeSectionVisible, setIsHomeSectionVisible] = useState<boolean>();
+  const [shoeColor, setShoeColor] = useState("black");
+
   const [scrolledPixels, setScrolledPixels] = useState(80);
   const [lineFlag, setLineFlag] = useState(false);
   const [reachedBottom, setReachedBottom] = useState(false);
@@ -38,8 +40,6 @@ function App() {
 
   useEffect(() => {
     const container = containerRef.current;
-
-    console.log(container?.scrollTop);
 
     const handleScroll = () => {
       if (
@@ -99,7 +99,7 @@ function App() {
       </AnimatePresence>
 
       <div className="container" ref={containerRef}>
-        <Home homeSectionRef={homeSectionRef} />
+        <Home homeSectionRef={homeSectionRef} shoeColor={shoeColor} />
         <ProductPage productSectionRef={productSectionRef} />
       </div>
 
