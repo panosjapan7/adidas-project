@@ -19,13 +19,19 @@ const Home = ({
         <p className="ultraboost-text-mobile">ultraboost 1.0</p>
       )}
 
-      <div className="ultraboost-text-container">
+      {/* <div className="ultraboost-text-container">
         <p className="ultraboost-text">ultraboost 1.0</p>
       </div>
       <div className="ultraboost-empty-text-container">
         <p className="ultraboost-empty-text">ultraboost 1.0</p>
-      </div>
+      </div> */}
       <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
+        <div className="ultraboost-text-container">
+          <p className="ultraboost-text">ultraboost 1.0</p>
+        </div>
+        <div className="ultraboost-empty-text-container">
+          <p className="ultraboost-empty-text">ultraboost 1.0</p>
+        </div>
         <img
           src={ShoeHeroDesktop}
           className="shoe-hero-desktop"
