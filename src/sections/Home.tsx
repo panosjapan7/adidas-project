@@ -20,13 +20,8 @@ const Home = ({
           ultraboost 1.0
         </p>
       </div>
+
       <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
-        {/* <div className="ultraboost-text-container" ref={homeSectionRef}>
-          <p className="ultraboost-text">ultraboost 1.0</p>
-        </div>
-        <div className="ultraboost-empty-text-container" ref={homeSectionRef}>
-          <p className="ultraboost-empty-text">ultraboost 1.0</p>
-        </div> */}
         <img
           src={ShoeHeroDesktop}
           className="shoe-hero-desktop"
