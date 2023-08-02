@@ -91,9 +91,10 @@
 } */
 
 /* Surface Pro 7 */
-/* @media (width: 912px) and (height: 1368px) {
+@media (width: 912px) and (height: 1368px) {
   .productSection {
     flex-direction: column;
+    padding-top: 250px;
   }
   .left-column,
   .right-column {
@@ -101,11 +102,12 @@
   }
   .left-column {
     height: 80vh;
+    width: 70vw;
   }
   .product-title-container {
     top: 130px;
   }
-} */
+}
 
 @media (min-width: 10px) and (max-width: 600px) {
   .productSection {

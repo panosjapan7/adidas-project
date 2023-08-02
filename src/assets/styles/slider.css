@@ -65,12 +65,12 @@
 @media (min-width: 520px) and (max-width: 600px) {
   .slider {
     margin-top: 20vh;
-    width: 85vw;
+    width: 70vw;
   }
 }
 @media (min-width: 10px) and (max-width: 519px) {
   .slider {
     margin-top: 20vh;
-    width: 100vw;
+    width: 80vw;
   }
 }
