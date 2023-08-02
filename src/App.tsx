@@ -53,7 +53,6 @@ function App() {
         setLineFlag(false);
       }
       if (isProductSectionVisible && !lineFlag && !reachedBottom) {
-        console.log(2);
         setScrolledPixels(80);
         setLineFlag(true);
       }
