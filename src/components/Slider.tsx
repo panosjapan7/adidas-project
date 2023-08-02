@@ -8,14 +8,6 @@ import BlackS4 from "../assets/images/slides/slide-4-black.png";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 
 const Slider = () => {
-  //   const slides = document.querySelectorAll(".slide");
-  //   if (slides) {
-  //     slides.forEach(
-  //       (s, index) =>
-  //         ((s as HTMLElement).style.transform = `translateX(${100 * index})`)
-  //     );
-  //   }
-  //   console.log(slides);
   const slides = [BlackS0, BlackS1, BlackS2, BlackS3, BlackS4];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -31,14 +23,6 @@ const Slider = () => {
   console.log({ currentSlide });
   return (
     <div className="slider">
-      {/* <img src={BlackS0} className="slide" alt="ultraboost black" /> */}
-      {/* <img src={BlackS1} className="slide" alt="ultraboost black" /> */}
-      {/* <img src={BlackS2} className="slide" alt="ultraboost black" /> */}
-      {/* <img src={BlackS3} className="slide" alt="ultraboost black" /> */}
-      {/* <img src={BlackS4} className="slide" alt="ultraboost black" /> */}
-
-      {/* <img src={slides[currentSlide]} className="slide" alt="ultraboost shoe" /> */}
-
       {slides.map((slide, index) => (
         <img
           key={index}
