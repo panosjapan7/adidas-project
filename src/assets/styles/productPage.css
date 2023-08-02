@@ -30,7 +30,7 @@
   width: 50vw;
 }
 .left-column {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
 
   display: flex;
