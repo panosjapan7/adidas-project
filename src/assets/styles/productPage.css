@@ -62,19 +62,20 @@
 }
 /*
 /* iPad Air */
-
-/* @media (width: 820px) and (height: 1180px) {
+@media (width: 820px) and (height: 1180px) {
   .productSection {
     flex-direction: column;
+    padding-top: 250px;
   }
   .left-column,
   .right-column {
     width: 100%;
   }
   .left-column {
-    height: 80vh;
+    height: 100vh;
+    width: 68vw;
   }
-} */
+}
 
 /* iPad Mini */
 @media (width: 768px) and (height: 1024px) {
