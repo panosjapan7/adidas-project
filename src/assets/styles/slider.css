@@ -62,15 +62,106 @@
   right: 0;
 }
 
+.slider-dots-container {
+  position: absolute;
+  bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.slider-dot {
+  border-radius: 50%;
+  background-color: none;
+
+  width: 15px;
+  height: 15px;
+  border: 2px solid #d3d3d3;
+}
+.slider-dot.active {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+}
+
 @media (min-width: 520px) and (max-width: 600px) {
   .slider {
     margin-top: 20vh;
     width: 70vw;
+  }
+  .slider-dots-container {
+    bottom: 2vh;
+  }
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .slider-dot.active {
+    width: 15px;
+    height: 15px;
   }
 }
 @media (min-width: 10px) and (max-width: 519px) {
   .slider {
     margin-top: 20vh;
     width: 80vw;
+  }
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+  }
+  .slider-dot.active {
+    width: 14px;
+    height: 14px;
+  }
+  .slider-dots-container {
+    bottom: 0vh;
+  }
+}
+
+/* iPad Air */
+@media (width: 820px) and (height: 1180px) {
+  .slider-dot {
+    width: 15px;
+    height: 15px;
+  }
+  .slider-dot.active {
+    width: 20px;
+    height: 20px;
+  }
+  .slider-dots-container {
+    bottom: 1vh;
+  }
+}
+
+/* iPad Mini */
+@media (width: 768px) and (height: 1024px) {
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .slider-dot.active {
+    width: 18px;
+    height: 18px;
+  }
+  .slider-dots-container {
+    bottom: 1vh;
+  }
+}
+
+/* Surface Pro 7 */
+@media (width: 912px) and (height: 1368px) {
+  .slider-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .slider-dot.active {
+    width: 18px;
+    height: 18px;
+  }
+  .slider-dots-container {
+    bottom: 1vh;
   }
 }

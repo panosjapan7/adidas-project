@@ -55,7 +55,12 @@ const Slider = () => {
       <div className="slider-button-right">
         <AiFillRightCircle className="button-right" onClick={goToNextSlide} />
       </div>
-      <div className="slider-dots-container"></div>
+      <div className="slider-dots-container">
+        <div className="slider-dot active"></div>
+        <div className="slider-dot"></div>
+        <div className="slider-dot"></div>
+        <div className="slider-dot"></div>
+      </div>
     </div>
   );
 };
