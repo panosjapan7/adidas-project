@@ -56,10 +56,21 @@ const Slider = () => {
         <AiFillRightCircle className="button-right" onClick={goToNextSlide} />
       </div>
       <div className="slider-dots-container">
-        <div className="slider-dot active"></div>
-        <div className="slider-dot"></div>
-        <div className="slider-dot"></div>
-        <div className="slider-dot"></div>
+        <div
+          className={currentSlide === 0 ? "slider-dot active" : "slider-dot"}
+        ></div>
+        <div
+          className={currentSlide === 1 ? "slider-dot active" : "slider-dot"}
+        ></div>
+        <div
+          className={currentSlide === 2 ? "slider-dot active" : "slider-dot"}
+        ></div>
+        <div
+          className={currentSlide === 3 ? "slider-dot active" : "slider-dot"}
+        ></div>
+        <div
+          className={currentSlide === 4 ? "slider-dot active" : "slider-dot"}
+        ></div>
       </div>
     </div>
   );
