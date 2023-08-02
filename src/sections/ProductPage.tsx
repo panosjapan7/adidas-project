@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "../assets/styles/productPage.css";
-import Black0 from "../assets/images/carousel-photos/black-0.png";
-import Black1 from "../assets/images/carousel-photos/black-1.png";
 import Slider from "../components/Slider";
 
 const ProductPage = ({
@@ -17,7 +15,6 @@ const ProductPage = ({
         ".right-column"
       ) as HTMLDivElement;
       if (rightColumn) {
-        console.log(rightColumn);
         rightColumn.classList.add("expanded");
       }
     }
