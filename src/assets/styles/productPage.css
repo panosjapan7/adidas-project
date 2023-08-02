@@ -38,6 +38,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* background-color: #ffff; */
 }
 .right-column {
   /* border: 1px solid blue; */
@@ -57,16 +58,12 @@
   }
 }
 
-.a-damn-box {
-  border: 2px solid green;
-  width: 500px;
-  height: 500px;
-}
-
 .product-slider-container {
 }
+/*
 /* iPad Air */
-@media (width: 820px) and (height: 1180px) {
+
+/* @media (width: 820px) and (height: 1180px) {
   .productSection {
     flex-direction: column;
   }
@@ -77,9 +74,10 @@
   .left-column {
     height: 80vh;
   }
-}
+} */
+
 /* iPad Mini */
-@media (width: 768px) and (height: 1024px) {
+/* @media (width: 768px) and (height: 1024px) {
   .productSection {
     flex-direction: column;
   }
@@ -90,9 +88,10 @@
   .left-column {
     height: 80vh;
   }
-}
+} */
+
 /* Surface Pro 7 */
-@media (width: 912px) and (height: 1368px) {
+/* @media (width: 912px) and (height: 1368px) {
   .productSection {
     flex-direction: column;
   }
@@ -106,7 +105,7 @@
   .product-title-container {
     top: 130px;
   }
-}
+} */
 
 @media (min-width: 10px) and (max-width: 600px) {
   .productSection {
@@ -114,7 +113,7 @@
   }
   .product-title-container {
     position: absolute;
-    top: 70px;
+    top: 80px;
   }
   .product-title {
     font-size: 2rem;
@@ -127,7 +126,12 @@
     width: 100%;
   }
   .left-column {
-    height: 80vh;
+    /* height: 80vh; */
+    /* height: 1000px; */
+    /* margin-top: 40%; */
+
+    height: 200vh;
+    /* justify-content: end; */
   }
 }
 @media (min-width: 141px) and (max-width: 500px) {

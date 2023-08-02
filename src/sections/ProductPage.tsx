@@ -26,10 +26,9 @@ const ProductPage = ({
         <p className="product-title">ultraboost 1.0</p>
         <p className="product-price">$190.00</p>
       </div>
-
+      {/* <div className="a-damn-box"></div> */}
       <div className="left-column" ref={productSectionRef} id="productSection">
         <Slider />
-        {/* <div className="a-damn-box"></div> */}
 
         {/* <p ref={productSectionRef}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel
