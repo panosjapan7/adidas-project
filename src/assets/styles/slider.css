@@ -1,0 +1,50 @@
+.slider {
+  /* scale: 0.5; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid green;
+  width: 100%;
+  max-width: 50hw;
+  height: 100%;
+  max-height: 500px;
+  position: relative;
+  margin-top: 50px;
+}
+.slide {
+  position: absolute;
+  top: 50%;
+  margin-top: -50%;
+  right: 50%;
+  margin-right: -50%;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.slide > img {
+}
+
+.button-left,
+.button-right {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+.button-left {
+  top: 50%;
+  left: 0px;
+}
+.button-right {
+  top: 50%;
+  right: 0;
+}
+
+@media (min-width: 10px) and (max-width: 950px) {
+  .slider {
+    margin-top: 10vh;
+  }
+}
