@@ -1,5 +1,6 @@
 import React from "react";
 import "../../assets/styles/productDetails.css";
+import { BsCheckLg } from "react-icons/bs";
 
 const ProductDetails = () => {
   return (
@@ -14,6 +15,12 @@ const ProductDetails = () => {
           <p className="size">12</p>
         </div>
         <p className="find-your-size">find your size</p>
+      </div>
+      <div className="colors-container">
+        <div className="color selected" style={{ backgroundColor: "black" }}>
+          <BsCheckLg className="color-checkmark" />
+        </div>
+        <div className="color" style={{ backgroundColor: "#DCCFC8" }}></div>
       </div>
     </div>
   );
