@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
+
+.product-info-box-wrapper {
+  /* border: 1px solid red; */
+  margin-top: 40px;
+  width: 100%;
+  /* width: 500px; */
+  width: fit-content;
+  height: auto;
+}
+
+.info-box-sections-container {
+  display: flex;
+  justify-content: space-between;
+}
+.section-title {
+  font-family: "Tektur", sans-serif;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+  letter-spacing: 0.02rem;
+}
+.section-title.active {
+  font-family: "Tektur", sans-serif;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.product-info-hr {
+  border-top: 1px solid black;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.description-content {
+  padding-top: 10px;
+  width: fit-content;
+  overflow-y: auto;
+  height: 250px;
+}
+.description-content-headline {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  margin-bottom: 5px;
+}
+.description-content-content {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+}
