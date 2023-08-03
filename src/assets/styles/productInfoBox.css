@@ -11,18 +11,22 @@
 
 .info-box-sections-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 10px 5vw;
+  flex-wrap: wrap;
 }
 .section-title {
   font-family: "Tektur", sans-serif;
   font-size: 0.9rem;
   color: #d3d3d3;
   letter-spacing: 0.02rem;
+  cursor: pointer;
 }
 .section-title.active {
   font-family: "Tektur", sans-serif;
   font-size: 0.9rem;
   color: black;
+  cursor: default;
 }
 
 .product-info-hr {

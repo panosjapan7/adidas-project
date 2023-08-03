@@ -30,7 +30,7 @@ const Slider = () => {
   console.log({ currentSlide });
   return (
     <div className="slider">
-      {slidesPink.map((slide, index) => (
+      {slidesBlack.map((slide, index) => (
         <img
           key={index}
           src={slide}

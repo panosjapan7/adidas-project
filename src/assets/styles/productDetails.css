@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
 
 .product-details-wrapper {
+  width: 600px;
+  padding-right: 20px;
 }
 .sizes-wrapper {
   display: flex;
@@ -8,6 +10,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: start;
+  padding-top: 80px;
 }
 .size-numbers-container {
   display: flex;
