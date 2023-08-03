@@ -1,6 +1,7 @@
 import React from "react";
 import "../../assets/styles/productDetails.css";
 import { BsCheckLg } from "react-icons/bs";
+import ProductInfoBox from "./ProductInfoBox";
 
 const ProductDetails = () => {
   return (
@@ -23,6 +24,7 @@ const ProductDetails = () => {
         <div className="color" style={{ backgroundColor: "#DCCFC8" }}></div>
       </div>
       <button className="add-to-bag">ADD TO BAG</button>
+      <ProductInfoBox />
     </div>
   );
 };
