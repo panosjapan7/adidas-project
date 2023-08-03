@@ -94,3 +94,10 @@
     width: 100%;
   }
 }
+
+@media (min-width: 10px) and (max-width: 200px) {
+  .size-numbers-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
