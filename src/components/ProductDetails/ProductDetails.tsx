@@ -3,7 +3,14 @@ import "../../assets/styles/productDetails.css";
 import { BsCheckLg } from "react-icons/bs";
 import ProductInfoBox from "./ProductInfoBox";
 
-const ProductDetails = () => {
+const ProductDetails = ({
+  shoeColor,
+  setShoeColor,
+}: {
+  shoeColor: string;
+  setShoeColor: (shoeColor: string) => void;
+}) => {
+  console.log({ shoeColor });
   return (
     <div className="product-details-wrapper">
       <div className="sizes-wrapper">
@@ -19,10 +26,20 @@ const ProductDetails = () => {
       </div>
       <div className="colors-button-container">
         <div className="colors-container">
-          <div className="color selected" style={{ backgroundColor: "black" }}>
-            <BsCheckLg className="color-checkmark" />
+          <div
+            className={`color ${shoeColor === "black" ? "selected" : ""}`}
+            style={{ backgroundColor: "black" }}
+            onClick={() => setShoeColor("black")}
+          >
+            {shoeColor === "black" && <BsCheckLg className="color-checkmark" />}
           </div>
-          <div className="color" style={{ backgroundColor: "#DCCFC8" }}></div>
+          <div
+            className={`color ${shoeColor === "pink" ? "selected" : ""}`}
+            style={{ backgroundColor: "#DCCFC8" }}
+            onClick={() => setShoeColor("pink")}
+          >
+            {shoeColor === "pink" && <BsCheckLg className="color-checkmark" />}
+          </div>
         </div>
         <button className="add-to-bag">ADD TO BAG</button>
       </div>

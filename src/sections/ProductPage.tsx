@@ -6,9 +6,13 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 const ProductPage = ({
   productSectionRef,
   isProductSectionVisible,
+  shoeColor,
+  setShoeColor,
 }: {
   productSectionRef: React.RefObject<HTMLDivElement>;
   isProductSectionVisible: boolean | undefined;
+  shoeColor: string;
+  setShoeColor: (shoeColor: string) => void;
 }) => {
   useEffect(() => {
     if (isProductSectionVisible) {
@@ -28,7 +32,7 @@ const ProductPage = ({
         <p className="product-price">$190.00</p>
       </div>
       <div className="left-column" ref={productSectionRef} id="productSection">
-        <Slider />
+        <Slider shoeColor={shoeColor} />
 
         {/* <p ref={productSectionRef}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel
@@ -36,7 +40,7 @@ const ProductPage = ({
         </p> */}
       </div>
       <div className="right-column" id="productSection">
-        <ProductDetails />
+        <ProductDetails shoeColor={shoeColor} setShoeColor={setShoeColor} />
       </div>
     </section>
   );

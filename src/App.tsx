@@ -99,6 +99,8 @@ function App() {
         <ProductPage
           productSectionRef={productSectionRef}
           isProductSectionVisible={isProductSectionVisible}
+          shoeColor={shoeColor}
+          setShoeColor={setShoeColor}
         />
       </div>
 

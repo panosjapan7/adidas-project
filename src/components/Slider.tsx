@@ -13,7 +13,7 @@ import PinkS4 from "../assets/images/slides/slide-4-pink.png";
 
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 
-const Slider = () => {
+const Slider = ({ shoeColor }: { shoeColor: string }) => {
   const slidesBlack = [BlackS0, BlackS1, BlackS2, BlackS3, BlackS4];
   const slidesPink = [PinkS0, PinkS1, PinkS2, PinkS3, PinkS4];
   const [currentSlide, setCurrentSlide] = useState(0);
