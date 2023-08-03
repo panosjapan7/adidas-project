@@ -30,15 +30,30 @@ const Slider = ({ shoeColor }: { shoeColor: string }) => {
   console.log({ currentSlide });
   return (
     <div className="slider">
-      {slidesBlack.map((slide, index) => (
-        <img
-          key={index}
-          src={slide}
-          className="slide"
-          alt="ultraboost shoe"
-          style={{ transform: `translateX(${100 * (index - currentSlide)}%)` }}
-        />
-      ))}
+      {shoeColor === "black" &&
+        slidesBlack.map((slide, index) => (
+          <img
+            key={index}
+            src={slide}
+            className="slide"
+            alt="ultraboost shoe"
+            style={{
+              transform: `translateX(${100 * (index - currentSlide)}%)`,
+            }}
+          />
+        ))}
+      {shoeColor === "pink" &&
+        slidesPink.map((slide, index) => (
+          <img
+            key={index}
+            src={slide}
+            className="slide"
+            alt="ultraboost shoe"
+            style={{
+              transform: `translateX(${100 * (index - currentSlide)}%)`,
+            }}
+          />
+        ))}
 
       <div className="slider-button-left" onClick={goToPreviousSlide}>
         <AiFillLeftCircle className="button-left" />
