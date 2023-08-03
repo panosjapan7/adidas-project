@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../assets/styles/productPage.css";
 import Slider from "../components/Slider";
+import ProductDetails from "../components/ProductDetails/ProductDetails";
 
 const ProductPage = ({
   productSectionRef,
@@ -34,7 +35,9 @@ const ProductPage = ({
           minima dicta odio iusto itaque eos voluptates, ipsa libero voluptatem?
         </p> */}
       </div>
-      <div className="right-column" id="productSection"></div>
+      <div className="right-column" id="productSection">
+        <ProductDetails />
+      </div>
     </section>
   );
 };

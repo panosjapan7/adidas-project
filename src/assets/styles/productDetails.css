@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
+
+.product-details-wrapper {
+}
+.sizes-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.size-numbers-container {
+  display: flex;
+  gap: 18px;
+}
+.size {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+}
+.find-your-size {
+  font-family: "Tektur", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
