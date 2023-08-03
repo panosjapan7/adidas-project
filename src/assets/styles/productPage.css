@@ -9,7 +9,7 @@
 }
 .product-title-container {
   position: absolute;
-  top: 60px;
+  top: 70px;
   z-index: 10;
   font-family: "Tektur", "sans-serif";
 
@@ -17,11 +17,11 @@
   text-align: center;
 }
 .product-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
 }
 .product-price {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -157,19 +157,24 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   /* padding-top: 80px; */
   padding-left: 50px;
 }
 
 .right-column.expanded {
   animation: slideInColumnFromTop 0.8s forwards;
-  overflow: auto;
+  /* overflow: auto; */
 }
 @keyframes slideInColumnFromTop {
   to {
     height: 100vh;
     opacity: 1;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 727px) {
+  .sizes-wrapper {
   }
 }
 

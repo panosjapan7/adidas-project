@@ -17,13 +17,15 @@ const ProductDetails = () => {
         </div>
         <p className="find-your-size">find your size</p>
       </div>
-      <div className="colors-container">
-        <div className="color selected" style={{ backgroundColor: "black" }}>
-          <BsCheckLg className="color-checkmark" />
+      <div className="colors-button-container">
+        <div className="colors-container">
+          <div className="color selected" style={{ backgroundColor: "black" }}>
+            <BsCheckLg className="color-checkmark" />
+          </div>
+          <div className="color" style={{ backgroundColor: "#DCCFC8" }}></div>
         </div>
-        <div className="color" style={{ backgroundColor: "#DCCFC8" }}></div>
+        <button className="add-to-bag">ADD TO BAG</button>
       </div>
-      <button className="add-to-bag">ADD TO BAG</button>
       <ProductInfoBox />
     </div>
   );
