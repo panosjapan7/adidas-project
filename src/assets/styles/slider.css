@@ -115,7 +115,7 @@
 }
 @media (min-width: 10px) and (max-width: 519px) {
   .slider {
-    margin-top: 20vh;
+    margin-top: 0vh;
     width: 80vw;
   }
   .button-left {
