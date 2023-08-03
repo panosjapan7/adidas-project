@@ -86,4 +86,11 @@
     justify-content: center;
     padding-top: 30px;
   }
+  .colors-container {
+    justify-content: center;
+  }
+  .add-to-bag {
+    height: 50px;
+    width: 100%;
+  }
 }
