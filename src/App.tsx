@@ -102,7 +102,7 @@ function App() {
         />
       </div>
 
-      <div className="navivationArrows-wrapper">
+      {/* <div className="navivationArrows-wrapper">
         <div className="navigationArrows-content-wrapper">
           <div className="arrow-container">
             <SlArrowDown
@@ -123,7 +123,7 @@ function App() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

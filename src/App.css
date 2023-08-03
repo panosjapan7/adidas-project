@@ -1,5 +1,5 @@
 .container {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   overflow-y: scroll;
   height: 100vh;
   position: relative;
@@ -8,6 +8,7 @@
 }
 
 section {
+  scroll-snap-type: y mandatory;
   height: 100vh;
   display: flex;
   justify-content: center;

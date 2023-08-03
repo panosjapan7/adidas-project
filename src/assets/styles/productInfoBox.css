@@ -38,8 +38,9 @@
 .description-content {
   padding-top: 10px;
   width: fit-content;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   height: 250px;
+  padding-bottom: 30px;
 }
 .description-content-headline {
   font-family: "Inter", sans-serif;

@@ -40,26 +40,6 @@
   text-align: center;
   /* background-color: #ffff; */
 }
-.right-column {
-  /* border: 1px solid blue; */
-  background-color: #ffff;
-  height: 0;
-  overflow-y: hidden;
-  opacity: 0;
-}
-
-.right-column.expanded {
-  animation: slideInColumnFromTop 0.8s forwards;
-}
-@keyframes slideInColumnFromTop {
-  to {
-    height: 100vh;
-    opacity: 1;
-  }
-}
-
-.product-slider-container {
-}
 
 /* iPad Air */
 @media (width: 820px) and (height: 1180px) {
@@ -115,6 +95,7 @@
 @media (min-width: 10px) and (max-width: 600px) {
   .productSection {
     flex-direction: column;
+    height: auto;
   }
   .product-title-container {
     position: absolute;
@@ -130,13 +111,23 @@
   .right-column {
     width: 100%;
   }
+
   .left-column {
     /* height: 80vh; */
     /* height: 1000px; */
     /* margin-top: 40%; */
-
-    height: 200vh;
     /* justify-content: end; */
+    /* height: 200vh; */
+
+    height: 80vh;
+  }
+  .right-column.expanded {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 50px;
   }
 }
 @media (min-width: 141px) and (max-width: 500px) {
@@ -158,9 +149,35 @@
 
 /* RIGHT COLUMN */
 .right-column {
+  /* border: 1px solid blue; */
+  background-color: #ffff;
+  height: 0;
+  /* overflow-y: hidden; */
+  opacity: 0;
+
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  /* padding-top: 80px; */
   padding-left: 50px;
 }
+
+.right-column.expanded {
+  animation: slideInColumnFromTop 0.8s forwards;
+  overflow: auto;
+}
+@keyframes slideInColumnFromTop {
+  to {
+    height: 100vh;
+    opacity: 1;
+  }
+}
+
+/* @media (min-width: 10px) and (max-width: 600px) {
+  .right-column {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-left: 50px;
+  }
+} */
