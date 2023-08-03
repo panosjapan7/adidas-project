@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/styles/productInfoBox.css";
 
-const ProductInfoBox = () => {
+const ProductInfoBox = ({ shoeColor }: { shoeColor: string }) => {
   const [selectedTab, setSelectedTab] = useState("description");
 
   return (
@@ -61,9 +61,16 @@ const ProductInfoBox = () => {
                 recycled polyester
               </li>
               <li className="details-list-item">Imported</li>
-              <li className="details-list-item">
-                Product color: Core Black / Core Black / Beam Green
-              </li>
+              {shoeColor === "black" && (
+                <li className="details-list-item">
+                  Product color: Core Black / Core Black / Beam Green
+                </li>
+              )}
+              {shoeColor === "pink" && (
+                <li className="details-list-item">
+                  Product color: Wonder Taupe / Wonder Taupe / Aluminium
+                </li>
+              )}
               <li>Product code: HQ4199</li>
             </ul>
           </div>

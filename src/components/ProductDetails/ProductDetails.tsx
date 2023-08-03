@@ -43,7 +43,7 @@ const ProductDetails = ({
         </div>
         <button className="add-to-bag">ADD TO BAG</button>
       </div>
-      <ProductInfoBox />
+      <ProductInfoBox shoeColor={shoeColor} />
     </div>
   );
 };
