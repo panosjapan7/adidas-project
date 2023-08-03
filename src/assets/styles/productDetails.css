@@ -56,3 +56,20 @@
   height: 16px;
   color: white;
 }
+
+.add-to-bag {
+  all: unset;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  background-color: black;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-align: center;
+
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.add-to-bag:focus {
+  outline: revert;
+}

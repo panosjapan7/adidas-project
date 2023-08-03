@@ -22,6 +22,7 @@ const ProductDetails = () => {
         </div>
         <div className="color" style={{ backgroundColor: "#DCCFC8" }}></div>
       </div>
+      <button className="add-to-bag">ADD TO BAG</button>
     </div>
   );
 };
