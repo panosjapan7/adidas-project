@@ -12,10 +12,18 @@
 .size-numbers-container {
   display: flex;
   gap: 18px;
+  align-items: center;
 }
 .size {
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
+  color: #d3d3d3;
+}
+.size.selected {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: black;
+  font-weight: 700;
 }
 .find-your-size {
   font-family: "Tektur", sans-serif;

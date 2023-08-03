@@ -8,7 +8,7 @@ const ProductDetails = () => {
         <div className="size-numbers-container">
           <p className="size">7</p>
           <p className="size">8</p>
-          <p className="size">9</p>
+          <p className="size selected">9</p>
           <p className="size">10</p>
           <p className="size">11</p>
           <p className="size">12</p>
