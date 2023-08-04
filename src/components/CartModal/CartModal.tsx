@@ -6,6 +6,7 @@ import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 import Backdrop from "./Backdrop";
 import ShoeIconBlack from "../../assets/images/shoe-icon-black.png";
 import ShoeIconPink from "../../assets/images/shoe-icon-pink.png";
+import AdidasLogoSmall from "../../assets/images/adidas-logo-small-black.png";
 
 const dropIn = {
   hidden: {
@@ -92,6 +93,16 @@ const CartModal = ({
             )}
           </div>
 
+          {cartItems.length === 0 && (
+            <div className="emtpy-cart-tagline-container-desktop">
+              <img
+                src={AdidasLogoSmall}
+                className="adidas-logo-small-desktop"
+                alt="adidas logo"
+              />
+              <p className="emtpy-cart-tagline-desktop">#ImpossibleIsNothing</p>
+            </div>
+          )}
           {cartItems.length > 0 && (
             <table>
               <thead>
@@ -205,9 +216,18 @@ const CartModal = ({
                   </div>
                 </div>
               ))}
-
+            {cartItems.length === 0 && (
+              <div className="emtpy-cart-tagline-container">
+                <img
+                  src={AdidasLogoSmall}
+                  className="adidas-logo-small"
+                  alt="adidas logo"
+                />
+                <p className="emtpy-cart-tagline">#ImpossibleIsNothing</p>
+              </div>
+            )}
             <div className="subtotal-container-mobile">
-              <div className="hr-mobile"></div>
+              {cartItems.length > 0 && <div className="hr-mobile"></div>}
               {cartItems.length > 0 && (
                 <p className="subtotal-mobile">
                   SUBTOTAL: {getTotal(cartItems)?.toFixed(2)}

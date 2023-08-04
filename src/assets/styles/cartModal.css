@@ -132,6 +132,55 @@ th {
   display: none;
 }
 
+.emtpy-cart-tagline-container-desktop {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.adidas-logo-small-desktop {
+  width: 100px;
+  height: auto;
+}
+.emtpy-cart-tagline-desktop {
+  font-family: "Tektur", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  letter-spacing: 0.2rem;
+  color: #d3d3d3;
+}
+@media (max-width: 650px) {
+  .emtpy-cart-tagline-container-desktop {
+    display: none;
+  }
+}
+
+.emtpy-cart-tagline-container {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.adidas-logo-small {
+  width: 70px;
+  height: auto;
+}
+.emtpy-cart-tagline {
+  font-family: "Tektur", sans-serif;
+  font-weight: 400;
+  font-size: 4vw;
+  letter-spacing: 0.2rem;
+}
+@media (max-width: 170px) {
+  .emtpy-cart-tagline {
+    display: none;
+  }
+}
+
 @media (max-width: 650px) {
   .modal {
     width: clamp(50%, 700px, 90%);
