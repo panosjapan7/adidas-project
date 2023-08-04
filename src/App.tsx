@@ -19,11 +19,10 @@ gsap.registerPlugin(Draggable);
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const homeSectionRef = useRef<HTMLDivElement>(null);
   const productSectionRef = useRef<HTMLDivElement>(null);
   const [isProductSectionVisible, setIsProductSectionVisible] =
     useState<boolean>();
-  const [isHomeSectionVisible, setIsHomeSectionVisible] = useState<boolean>();
+  useState<boolean>();
   const [shoeColor, setShoeColor] = useState("black");
   const [shoeSize, setShoeSize] = useState<number | undefined>();
 
@@ -65,61 +64,6 @@ function App() {
     if (productSectionRef.current) observer.observe(productSectionRef.current);
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setIsHomeSectionVisible(entry.isIntersecting);
-    });
-    if (homeSectionRef.current) observer.observe(homeSectionRef.current);
-  }, []);
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    const handleScroll = () => {
-      if (
-        scrolledPixels <= 80 &&
-        scrolledPixels > 30 &&
-        isHomeSectionVisible &&
-        !isProductSectionVisible &&
-        !lineFlag
-      ) {
-        setScrolledPixels((prev) => prev - 1.5);
-        setLineFlag(false);
-      }
-      if (isProductSectionVisible && !lineFlag && !reachedBottom) {
-        setScrolledPixels(80);
-        setLineFlag(true);
-      }
-      if (container?.scrollTop! > 350) {
-        setLineFlag(false);
-        setReachedBottom(true);
-      }
-      // if (isProductSectionVisible && !lineFlag && reachedBottom) {
-      //   console.log(4);
-      //   setScrolledPixels((prev) => prev - 1.5);
-      // }
-      if (container?.scrollTop! < 100) {
-        setScrolledPixels(80);
-        setReachedBottom(false);
-      }
-    };
-
-    container?.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on unmount
-    return () => {
-      container?.removeEventListener("scroll", handleScroll);
-    };
-  }, [
-    isProductSectionVisible,
-    isHomeSectionVisible,
-    scrolledPixels,
-    lineFlag,
-    reachedBottom,
-  ]);
-
-  console.log({ cartItems });
   return (
     <div>
       <TopMenu
@@ -138,7 +82,7 @@ function App() {
       </AnimatePresence>
 
       <div className="container" ref={containerRef}>
-        <Home homeSectionRef={homeSectionRef} shoeColor={shoeColor} />
+        <Home shoeColor={shoeColor} />
         <ProductPage
           productSectionRef={productSectionRef}
           isProductSectionVisible={isProductSectionVisible}
