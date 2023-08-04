@@ -5,13 +5,7 @@ import ShoeHeroDesktopPink from "../assets/images/shoe-hero-pink.svg";
 import ShoeHeroDesktopWhite from "../assets/images/shoe-hero-white.svg";
 import ShoeHeroShadowDesktop from "../assets/images/shoe-hero-shadow-desktop.svg";
 
-const Home = ({
-  homeSectionRef,
-  shoeColor,
-}: {
-  homeSectionRef: React.RefObject<HTMLDivElement>;
-  shoeColor: string;
-}) => {
+const Home = ({ shoeColor }: { shoeColor: string }) => {
   let shoeHeroImage;
   if (shoeColor === "black") {
     shoeHeroImage = ShoeHeroDesktop;
@@ -25,18 +19,14 @@ const Home = ({
 
   return (
     <section id="homeSection" className="homeSection">
-      <div className="ultraboost-text-container" ref={homeSectionRef}>
-        <p className="ultraboost-text" ref={homeSectionRef}>
-          ultraboost 1.0
-        </p>
+      <div className="ultraboost-text-container">
+        <p className="ultraboost-text">ultraboost 1.0</p>
       </div>
-      <div className="ultraboost-empty-text-container" ref={homeSectionRef}>
-        <p className="ultraboost-empty-text" ref={homeSectionRef}>
-          ultraboost 1.0
-        </p>
+      <div className="ultraboost-empty-text-container">
+        <p className="ultraboost-empty-text">ultraboost 1.0</p>
       </div>
 
-      <div className="shoe-hero-desktop-container" ref={homeSectionRef}>
+      <div className="shoe-hero-desktop-container">
         <img
           src={shoeHeroImage}
           className="shoe-hero-desktop"

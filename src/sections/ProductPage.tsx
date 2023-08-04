@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../assets/styles/productPage.css";
+import { CartItem } from "../interfaces/interfaces";
 import Slider from "../components/Slider";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 
@@ -10,6 +11,9 @@ const ProductPage = ({
   setShoeColor,
   shoeSize,
   setShoeSize,
+  cartItems,
+  setCartItems,
+  startAnimation,
 }: {
   productSectionRef: React.RefObject<HTMLDivElement>;
   isProductSectionVisible: boolean | undefined;
@@ -17,6 +21,10 @@ const ProductPage = ({
   setShoeColor: (shoeColor: string) => void;
   shoeSize: number | undefined;
   setShoeSize: (shoeSize: number | undefined) => void;
+  cartItems: CartItem[];
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
+
+  startAnimation: () => void;
 }) => {
   useEffect(() => {
     if (isProductSectionVisible) {
@@ -37,11 +45,6 @@ const ProductPage = ({
       </div>
       <div className="left-column" ref={productSectionRef} id="productSection">
         <Slider shoeColor={shoeColor} />
-
-        {/* <p ref={productSectionRef}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt vel
-          minima dicta odio iusto itaque eos voluptates, ipsa libero voluptatem?
-        </p> */}
       </div>
       <div className="right-column" id="productSection">
         <ProductDetails
@@ -49,6 +52,9 @@ const ProductPage = ({
           setShoeColor={setShoeColor}
           shoeSize={shoeSize}
           setShoeSize={setShoeSize}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+          startAnimation={startAnimation}
         />
       </div>
     </section>

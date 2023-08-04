@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
-import { BsHandbag } from "react-icons/bs";
+import { BsHandbag, BsHandbagFill } from "react-icons/bs";
 import "../assets/styles/topBar.css";
+import { CartItem } from "../interfaces/interfaces";
 import adidasLogo from "../assets/images/adidas-logo-white.png";
 import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
 
@@ -11,10 +12,13 @@ gsap.registerPlugin(Draggable);
 const TopMenu = ({
   cartTagDragged,
   setCartTagDragged,
+  cartItems,
 }: {
   cartTagDragged: boolean;
   setCartTagDragged: (cartTagDragge: boolean) => void;
+  cartItems: CartItem[];
 }) => {
+  const cartTagRef = useRef<HTMLDivElement>(null);
   const [cartHeight, setCartHeight] = useState(175);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -40,7 +44,7 @@ const TopMenu = ({
         minY: 0,
         maxY: 0.4,
       },
-      edgeResistance: 0.85,
+      edgeResistance: 0.5,
       onDrag() {
         this.prevY = this.y;
         if (this.y >= 40) {
@@ -63,9 +67,6 @@ const TopMenu = ({
 
   return (
     <div className="menu-wrapper">
-      {/* <div className="mobile-menu-wrapper">
-        <div className="mobile-menu-icon-container"></div>
-      </div> */}
       <div className="mobile-menu-wrapper">
         <input
           type="checkbox"
@@ -122,8 +123,16 @@ const TopMenu = ({
           <p className="text-links github-link">github</p>
         </a>
       </div>
-      <div className="cart-desktop-container" style={{ height: cartHeight }}>
-        <BsHandbag className="handbag-icon" />
+      <div
+        ref={cartTagRef}
+        className="cart-desktop-container"
+        style={{ height: cartHeight }}
+      >
+        {cartItems.length > 0 ? (
+          <BsHandbagFill className="handbag-icon" />
+        ) : (
+          <BsHandbag className="handbag-icon" />
+        )}
       </div>
     </div>
   );

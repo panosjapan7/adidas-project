@@ -1,20 +1,64 @@
 import React from "react";
+import gsap from "gsap";
+import Draggable from "gsap/Draggable";
 import "../../assets/styles/productDetails.css";
+import { CartItem } from "../../interfaces/interfaces";
 import { BsCheckLg } from "react-icons/bs";
 import ProductInfoBox from "./ProductInfoBox";
+
+gsap.registerPlugin(Draggable);
 
 const ProductDetails = ({
   shoeColor,
   setShoeColor,
   shoeSize,
   setShoeSize,
+  cartItems,
+  setCartItems,
+  startAnimation,
 }: {
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
   shoeSize: number | undefined;
   setShoeSize: (shoeSize: number | undefined) => void;
+  cartItems: CartItem[];
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
+  startAnimation: () => void;
 }) => {
-  console.log({ shoeColor });
+  const addToCart = (item: CartItem) => {
+    const existingItemIndex = cartItems.findIndex(
+      (cartItem) =>
+        cartItem.shoeColor === item.shoeColor &&
+        cartItem.shoeSize === item.shoeSize
+    );
+
+    if (existingItemIndex !== -1) {
+      setCartItems((prevCartItems) =>
+        prevCartItems.map((cartItem, index) => {
+          if (index === existingItemIndex) {
+            return {
+              ...cartItem,
+              shoeQuantity: cartItem.shoeQuantity + item.shoeQuantity,
+            };
+          }
+          return cartItem;
+        })
+      );
+    } else {
+      setCartItems((prevCartItems: any) => [...prevCartItems, item]);
+    }
+  };
+
+  const handleAddToBag = () => {
+    addToCart({
+      shoeColor: shoeColor,
+      shoeSize: shoeSize,
+      shoeQuantity: 1,
+      shoePrice: 190,
+    });
+    startAnimation();
+  };
+
   return (
     <div className="product-details-wrapper">
       <div className="sizes-wrapper">
@@ -75,7 +119,13 @@ const ProductDetails = ({
             {shoeColor === "pink" && <BsCheckLg className="color-checkmark" />}
           </div>
         </div>
-        <button className="add-to-bag">ADD TO BAG</button>
+        <button
+          onClick={handleAddToBag}
+          className="add-to-bag"
+          disabled={shoeSize === undefined ? true : false}
+        >
+          ADD TO BAG
+        </button>
       </div>
       <ProductInfoBox shoeColor={shoeColor} />
     </div>
