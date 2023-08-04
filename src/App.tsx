@@ -3,17 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import "./App.css";
+import { CartItem } from "./interfaces/interfaces";
 import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
 import TopMenu from "./components/TopMenu";
 import CartModal from "./components/CartModal/CartModal";
-
-interface CartItem {
-  shoeColor: string;
-  shoeSize: number | undefined;
-  shoeQuantity: number;
-  shoePrice: number;
-}
 
 gsap.registerPlugin(Draggable);
 

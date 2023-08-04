@@ -1,14 +1,8 @@
 import React, { useEffect } from "react";
 import "../assets/styles/productPage.css";
+import { CartItem } from "../interfaces/interfaces";
 import Slider from "../components/Slider";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
-
-interface CartItem {
-  shoeColor: string;
-  shoeSize: number | undefined;
-  shoeQuantity: number;
-  shoePrice: number;
-}
 
 const ProductPage = ({
   productSectionRef,

@@ -2,15 +2,9 @@ import React from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import "../../assets/styles/productDetails.css";
+import { CartItem } from "../../interfaces/interfaces";
 import { BsCheckLg } from "react-icons/bs";
 import ProductInfoBox from "./ProductInfoBox";
-
-interface CartItem {
-  shoeColor: string;
-  shoeSize: number | undefined;
-  shoeQuantity: number;
-  shoePrice: number;
-}
 
 gsap.registerPlugin(Draggable);
 

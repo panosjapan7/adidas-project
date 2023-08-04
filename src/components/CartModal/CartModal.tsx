@@ -1,17 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../../assets/styles/cartModal.css";
+import { CartItem } from "../../interfaces/interfaces";
 import { CiCircleMinus, CiCirclePlus } from "react-icons/ci";
 import Backdrop from "./Backdrop";
 import ShoeIconBlack from "../../assets/images/shoe-icon-black.png";
 import ShoeIconPink from "../../assets/images/shoe-icon-pink.png";
-
-interface CartItem {
-  shoeColor: string;
-  shoeSize: number | undefined;
-  shoeQuantity: number;
-  shoePrice: number;
-}
 
 const dropIn = {
   hidden: {

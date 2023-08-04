@@ -3,15 +3,9 @@ import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import { BsHandbag, BsHandbagFill } from "react-icons/bs";
 import "../assets/styles/topBar.css";
+import { CartItem } from "../interfaces/interfaces";
 import adidasLogo from "../assets/images/adidas-logo-white.png";
 import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
-
-interface CartItem {
-  shoeColor: string;
-  shoeSize: number | undefined;
-  shoeQuantity: number;
-  shoePrice: number;
-}
 
 gsap.registerPlugin(Draggable);
 
