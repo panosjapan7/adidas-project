@@ -136,6 +136,7 @@ th {
   .modal {
     width: clamp(50%, 700px, 90%);
     height: auto;
+    margin-top: 100px;
   }
 
   table {
