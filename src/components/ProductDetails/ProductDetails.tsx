@@ -1,4 +1,6 @@
 import React from "react";
+import gsap from "gsap";
+import Draggable from "gsap/Draggable";
 import "../../assets/styles/productDetails.css";
 import { BsCheckLg } from "react-icons/bs";
 import ProductInfoBox from "./ProductInfoBox";
@@ -10,6 +12,8 @@ interface CartItem {
   shoePrice: number;
 }
 
+gsap.registerPlugin(Draggable);
+
 const ProductDetails = ({
   shoeColor,
   setShoeColor,
@@ -17,6 +21,7 @@ const ProductDetails = ({
   setShoeSize,
   cartItems,
   setCartItems,
+  startAnimation,
 }: {
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
@@ -24,6 +29,7 @@ const ProductDetails = ({
   setShoeSize: (shoeSize: number | undefined) => void;
   cartItems: CartItem[];
   setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
+  startAnimation: () => void;
 }) => {
   const addToCart = (item: CartItem) => {
     const existingItemIndex = cartItems.findIndex(
@@ -47,6 +53,16 @@ const ProductDetails = ({
     } else {
       setCartItems((prevCartItems: any) => [...prevCartItems, item]);
     }
+  };
+
+  const handleAddToBag = () => {
+    addToCart({
+      shoeColor: shoeColor,
+      shoeSize: shoeSize,
+      shoeQuantity: 1,
+      shoePrice: 190,
+    });
+    startAnimation();
   };
 
   return (
@@ -110,14 +126,7 @@ const ProductDetails = ({
           </div>
         </div>
         <button
-          onClick={() =>
-            addToCart({
-              shoeColor: shoeColor,
-              shoeSize: shoeSize,
-              shoeQuantity: 1,
-              shoePrice: 190,
-            })
-          }
+          onClick={handleAddToBag}
           className="add-to-bag"
           disabled={shoeSize === undefined ? true : false}
         >

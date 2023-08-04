@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import "../assets/styles/productPage.css";
 import Slider from "../components/Slider";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
@@ -19,6 +20,7 @@ const ProductPage = ({
   setShoeSize,
   cartItems,
   setCartItems,
+  startAnimation,
 }: {
   productSectionRef: React.RefObject<HTMLDivElement>;
   isProductSectionVisible: boolean | undefined;
@@ -28,6 +30,8 @@ const ProductPage = ({
   setShoeSize: (shoeSize: number | undefined) => void;
   cartItems: CartItem[];
   setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
+
+  startAnimation: () => void;
 }) => {
   useEffect(() => {
     if (isProductSectionVisible) {
@@ -62,6 +66,7 @@ const ProductPage = ({
           setShoeSize={setShoeSize}
           cartItems={cartItems}
           setCartItems={setCartItems}
+          startAnimation={startAnimation}
         />
       </div>
     </section>

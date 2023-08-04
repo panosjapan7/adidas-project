@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import { BsHandbag, BsHandbagFill } from "react-icons/bs";
@@ -24,6 +24,7 @@ const TopMenu = ({
   setCartTagDragged: (cartTagDragge: boolean) => void;
   cartItems: CartItem[];
 }) => {
+  const cartTagRef = useRef<HTMLDivElement>(null);
   const [cartHeight, setCartHeight] = useState(175);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -131,7 +132,11 @@ const TopMenu = ({
           <p className="text-links github-link">github</p>
         </a>
       </div>
-      <div className="cart-desktop-container" style={{ height: cartHeight }}>
+      <div
+        ref={cartTagRef}
+        className="cart-desktop-container"
+        style={{ height: cartHeight }}
+      >
         {cartItems.length > 0 ? (
           <BsHandbagFill className="handbag-icon" />
         ) : (

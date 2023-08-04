@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { SlArrowUp, SlArrowDown } from "react-icons/sl";
+import { motion, AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import Draggable from "gsap/Draggable";
 import "./App.css";
 import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
 import TopMenu from "./components/TopMenu";
 import CartModal from "./components/CartModal/CartModal";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface CartItem {
   shoeColor: string;
@@ -13,6 +14,8 @@ interface CartItem {
   shoeQuantity: number;
   shoePrice: number;
 }
+
+gsap.registerPlugin(Draggable);
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -31,6 +34,28 @@ function App() {
   const [cartTagDragged, setCartTagDragged] = useState(false);
 
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+  const startAnimation = () => {
+    gsap.fromTo(
+      ".cart-desktop-container",
+      {
+        y: 0,
+      },
+      {
+        duration: 0.2,
+        y: 30,
+        // ease: "power2.out",
+        ease: "none",
+        onComplete: () => {
+          gsap.to(".cart-desktop-container", {
+            duration: 0.4,
+            y: 0,
+            ease: "elastic(1.5, 0.4)",
+          });
+        },
+      }
+    );
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -123,6 +148,7 @@ function App() {
           setShoeSize={setShoeSize}
           cartItems={cartItems}
           setCartItems={setCartItems}
+          startAnimation={startAnimation}
         />
       </div>
 
