@@ -3,6 +3,13 @@ import "../assets/styles/productPage.css";
 import Slider from "../components/Slider";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 
+interface CartItem {
+  shoeColor: string;
+  shoeSize: string | undefined;
+  shoeQuantity: number;
+  shoePrice: number;
+}
+
 const ProductPage = ({
   productSectionRef,
   isProductSectionVisible,
@@ -10,13 +17,17 @@ const ProductPage = ({
   setShoeColor,
   shoeSize,
   setShoeSize,
+  cartItems,
+  setCartItems,
 }: {
   productSectionRef: React.RefObject<HTMLDivElement>;
   isProductSectionVisible: boolean | undefined;
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
-  shoeSize: number | undefined;
-  setShoeSize: (shoeSize: number | undefined) => void;
+  shoeSize: string | undefined;
+  setShoeSize: (shoeSize: string | undefined) => void;
+  cartItems: CartItem[];
+  setCartItems: (cartItems: CartItem[]) => void;
 }) => {
   useEffect(() => {
     if (isProductSectionVisible) {
@@ -49,6 +60,8 @@ const ProductPage = ({
           setShoeColor={setShoeColor}
           shoeSize={shoeSize}
           setShoeSize={setShoeSize}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
         />
       </div>
     </section>

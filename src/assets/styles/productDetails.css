@@ -85,6 +85,10 @@
 .add-to-bag:focus {
   outline: revert;
 }
+.add-to-bag:disabled {
+  cursor: default;
+  background-color: #d3d3d3;
+}
 
 @media (min-width: 10px) and (max-width: 600px) {
   .product-details-wrapper {

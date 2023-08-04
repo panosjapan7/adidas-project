@@ -7,6 +7,13 @@ import TopMenu from "./components/TopMenu";
 import CartModal from "./components/CartModal/CartModal";
 import { motion, AnimatePresence } from "framer-motion";
 
+interface CartItem {
+  shoeColor: string;
+  shoeSize: string | undefined;
+  shoeQuantity: number;
+  shoePrice: number;
+}
+
 function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const homeSectionRef = useRef<HTMLDivElement>(null);
@@ -15,13 +22,45 @@ function App() {
     useState<boolean>();
   const [isHomeSectionVisible, setIsHomeSectionVisible] = useState<boolean>();
   const [shoeColor, setShoeColor] = useState("black");
-  const [shoeSize, setShoeSize] = useState<number | undefined>();
+  const [shoeSize, setShoeSize] = useState<string | undefined>();
 
   const [scrolledPixels, setScrolledPixels] = useState(80);
   const [lineFlag, setLineFlag] = useState(false);
   const [reachedBottom, setReachedBottom] = useState(false);
 
   const [cartTagDragged, setCartTagDragged] = useState(false);
+
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+  const addToCart = (item: CartItem) => {
+    const existingItemIndex = cartItems.findIndex(
+      (cartItem) =>
+        cartItem.shoeColor === item.shoeColor &&
+        cartItem.shoeSize === item.shoeSize
+    );
+
+    if (existingItemIndex !== -1) {
+      setCartItems((prevCartItems) =>
+        prevCartItems.map((cartItem, index) => {
+          if (index === existingItemIndex) {
+            return {
+              ...cartItem,
+              shoeQuantity: cartItem.shoeQuantity + item.shoeQuantity,
+            };
+          }
+          return cartItem;
+        })
+      );
+    } else {
+      setCartItems((prevCartItems) => [...prevCartItems, item]);
+    }
+  };
+
+  const removeFromCart = (index: number) => {
+    setCartItems((prevCartItems: CartItem[]) =>
+      prevCartItems.filter((item: CartItem, i: number) => i !== index)
+    );
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -85,6 +124,8 @@ function App() {
     reachedBottom,
   ]);
 
+  console.log({ cartItems });
+  console.log({ shoeSize });
   return (
     <div>
       <TopMenu
@@ -104,6 +145,8 @@ function App() {
           setShoeColor={setShoeColor}
           shoeSize={shoeSize}
           setShoeSize={setShoeSize}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
         />
       </div>
 
