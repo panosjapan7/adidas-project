@@ -14,7 +14,6 @@ const ProductDetails = ({
   shoeSize: number | undefined;
   setShoeSize: (shoeSize: number | undefined) => void;
 }) => {
-  console.log({ shoeColor });
   return (
     <div className="product-details-wrapper">
       <div className="sizes-wrapper">

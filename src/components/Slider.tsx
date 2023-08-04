@@ -27,7 +27,7 @@ const Slider = ({ shoeColor }: { shoeColor: string }) => {
       prevSlide === 0 ? slidesBlack.length - 1 : prevSlide - 1
     );
   };
-  console.log({ currentSlide });
+
   return (
     <div className="slider">
       {shoeColor === "black" &&
