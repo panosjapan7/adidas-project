@@ -15,6 +15,7 @@ function App() {
     useState<boolean>();
   const [isHomeSectionVisible, setIsHomeSectionVisible] = useState<boolean>();
   const [shoeColor, setShoeColor] = useState("black");
+  const [shoeSize, setShoeSize] = useState<number | undefined>();
 
   const [scrolledPixels, setScrolledPixels] = useState(80);
   const [lineFlag, setLineFlag] = useState(false);
@@ -101,6 +102,8 @@ function App() {
           isProductSectionVisible={isProductSectionVisible}
           shoeColor={shoeColor}
           setShoeColor={setShoeColor}
+          shoeSize={shoeSize}
+          setShoeSize={setShoeSize}
         />
       </div>
 

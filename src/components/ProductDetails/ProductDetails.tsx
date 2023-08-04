@@ -6,21 +6,55 @@ import ProductInfoBox from "./ProductInfoBox";
 const ProductDetails = ({
   shoeColor,
   setShoeColor,
+  shoeSize,
+  setShoeSize,
 }: {
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
+  shoeSize: number | undefined;
+  setShoeSize: (shoeSize: number | undefined) => void;
 }) => {
   console.log({ shoeColor });
   return (
     <div className="product-details-wrapper">
       <div className="sizes-wrapper">
         <div className="size-numbers-container">
-          <p className="size">7</p>
-          <p className="size">8</p>
-          <p className="size selected">9</p>
-          <p className="size">10</p>
-          <p className="size">11</p>
-          <p className="size">12</p>
+          <p
+            className={`size ${shoeSize === 7 ? "selected" : ""}`}
+            onClick={() => setShoeSize(7)}
+          >
+            7
+          </p>
+          <p
+            className={`size ${shoeSize === 8 ? "selected" : ""}`}
+            onClick={() => setShoeSize(8)}
+          >
+            8
+          </p>
+          <p
+            className={`size ${shoeSize === 9 ? "selected" : ""}`}
+            onClick={() => setShoeSize(9)}
+          >
+            9
+          </p>
+          <p
+            className={`size ${shoeSize === 10 ? "selected" : ""}`}
+            onClick={() => setShoeSize(10)}
+          >
+            10
+          </p>
+          <p
+            className={`size ${shoeSize === 11 ? "selected" : ""}`}
+            onClick={() => setShoeSize(11)}
+          >
+            11
+          </p>
+          <p
+            className={`size ${shoeSize === 12 ? "selected" : ""}`}
+            onClick={() => setShoeSize(12)}
+          >
+            12
+          </p>
         </div>
         <p className="find-your-size">find your size</p>
       </div>

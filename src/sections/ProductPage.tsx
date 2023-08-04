@@ -8,11 +8,15 @@ const ProductPage = ({
   isProductSectionVisible,
   shoeColor,
   setShoeColor,
+  shoeSize,
+  setShoeSize,
 }: {
   productSectionRef: React.RefObject<HTMLDivElement>;
   isProductSectionVisible: boolean | undefined;
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
+  shoeSize: number | undefined;
+  setShoeSize: (shoeSize: number | undefined) => void;
 }) => {
   useEffect(() => {
     if (isProductSectionVisible) {
@@ -40,7 +44,12 @@ const ProductPage = ({
         </p> */}
       </div>
       <div className="right-column" id="productSection">
-        <ProductDetails shoeColor={shoeColor} setShoeColor={setShoeColor} />
+        <ProductDetails
+          shoeColor={shoeColor}
+          setShoeColor={setShoeColor}
+          shoeSize={shoeSize}
+          setShoeSize={setShoeSize}
+        />
       </div>
     </section>
   );
