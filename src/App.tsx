@@ -32,36 +32,6 @@ function App() {
 
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
-  const addToCart = (item: CartItem) => {
-    const existingItemIndex = cartItems.findIndex(
-      (cartItem) =>
-        cartItem.shoeColor === item.shoeColor &&
-        cartItem.shoeSize === item.shoeSize
-    );
-
-    if (existingItemIndex !== -1) {
-      setCartItems((prevCartItems) =>
-        prevCartItems.map((cartItem, index) => {
-          if (index === existingItemIndex) {
-            return {
-              ...cartItem,
-              shoeQuantity: cartItem.shoeQuantity + item.shoeQuantity,
-            };
-          }
-          return cartItem;
-        })
-      );
-    } else {
-      setCartItems((prevCartItems) => [...prevCartItems, item]);
-    }
-  };
-
-  const removeFromCart = (index: number) => {
-    setCartItems((prevCartItems: CartItem[]) =>
-      prevCartItems.filter((item: CartItem, i: number) => i !== index)
-    );
-  };
-
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -130,6 +100,7 @@ function App() {
       <TopMenu
         cartTagDragged={cartTagDragged}
         setCartTagDragged={setCartTagDragged}
+        cartItems={cartItems}
       />
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {cartTagDragged && (

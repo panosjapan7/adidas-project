@@ -1,19 +1,28 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
-import { BsHandbag } from "react-icons/bs";
+import { BsHandbag, BsHandbagFill } from "react-icons/bs";
 import "../assets/styles/topBar.css";
 import adidasLogo from "../assets/images/adidas-logo-white.png";
 import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
+
+interface CartItem {
+  shoeColor: string;
+  shoeSize: number | undefined;
+  shoeQuantity: number;
+  shoePrice: number;
+}
 
 gsap.registerPlugin(Draggable);
 
 const TopMenu = ({
   cartTagDragged,
   setCartTagDragged,
+  cartItems,
 }: {
   cartTagDragged: boolean;
   setCartTagDragged: (cartTagDragge: boolean) => void;
+  cartItems: CartItem[];
 }) => {
   const [cartHeight, setCartHeight] = useState(175);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -123,7 +132,11 @@ const TopMenu = ({
         </a>
       </div>
       <div className="cart-desktop-container" style={{ height: cartHeight }}>
-        <BsHandbag className="handbag-icon" />
+        {cartItems.length > 0 ? (
+          <BsHandbagFill className="handbag-icon" />
+        ) : (
+          <BsHandbag className="handbag-icon" />
+        )}
       </div>
     </div>
   );
