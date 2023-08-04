@@ -63,18 +63,23 @@ const Slider = ({ shoeColor }: { shoeColor: string }) => {
       </div>
       <div className="slider-dots-container">
         <div
+          onClick={() => setCurrentSlide(0)}
           className={currentSlide === 0 ? "slider-dot active" : "slider-dot"}
         ></div>
         <div
+          onClick={() => setCurrentSlide(1)}
           className={currentSlide === 1 ? "slider-dot active" : "slider-dot"}
         ></div>
         <div
+          onClick={() => setCurrentSlide(2)}
           className={currentSlide === 2 ? "slider-dot active" : "slider-dot"}
         ></div>
         <div
+          onClick={() => setCurrentSlide(3)}
           className={currentSlide === 3 ? "slider-dot active" : "slider-dot"}
         ></div>
         <div
+          onClick={() => setCurrentSlide(4)}
           className={currentSlide === 4 ? "slider-dot active" : "slider-dot"}
         ></div>
       </div>
