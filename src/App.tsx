@@ -125,7 +125,6 @@ function App() {
   ]);
 
   console.log({ cartItems });
-  console.log({ shoeSize });
   return (
     <div>
       <TopMenu
@@ -133,7 +132,13 @@ function App() {
         setCartTagDragged={setCartTagDragged}
       />
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
-        {cartTagDragged && <CartModal cartTagDragged={cartTagDragged} />}
+        {cartTagDragged && (
+          <CartModal
+            cartTagDragged={cartTagDragged}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          />
+        )}
       </AnimatePresence>
 
       <div className="container" ref={containerRef}>
