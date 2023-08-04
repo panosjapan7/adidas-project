@@ -125,7 +125,7 @@ const CartModal = ({
                     <td>ultraboost 1.0</td>
                     <td>{item.shoeColor}</td>
                     <td>{item.shoeSize}</td>
-                    <td>{item.shoePrice.toFixed(2)}</td>
+                    <td>${item.shoePrice.toFixed(2)}</td>
                     <td>
                       <div className="quantity-container">
                         <span>
@@ -147,7 +147,7 @@ const CartModal = ({
                         </span>
                       </div>
                     </td>
-                    <td>{(item.shoePrice * item.shoeQuantity).toFixed(2)}</td>
+                    <td>${(item.shoePrice * item.shoeQuantity).toFixed(2)}</td>
                   </tr>
                 ))}
 
