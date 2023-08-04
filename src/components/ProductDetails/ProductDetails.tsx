@@ -5,7 +5,7 @@ import ProductInfoBox from "./ProductInfoBox";
 
 interface CartItem {
   shoeColor: string;
-  shoeSize: string | undefined;
+  shoeSize: number | undefined;
   shoeQuantity: number;
   shoePrice: number;
 }
@@ -20,11 +20,10 @@ const ProductDetails = ({
 }: {
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
-  shoeSize: string | undefined;
-  setShoeSize: (shoeSize: string | undefined) => void;
+  shoeSize: number | undefined;
+  setShoeSize: (shoeSize: number | undefined) => void;
   cartItems: CartItem[];
-  // setCartItems: (cartItems: CartItem[]) => void;
-  setCartItems: any;
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
 }) => {
   const addToCart = (item: CartItem) => {
     const existingItemIndex = cartItems.findIndex(
@@ -34,8 +33,8 @@ const ProductDetails = ({
     );
 
     if (existingItemIndex !== -1) {
-      setCartItems((prevCartItems: any) =>
-        prevCartItems.map((cartItem: any, index: number) => {
+      setCartItems((prevCartItems) =>
+        prevCartItems.map((cartItem, index) => {
           if (index === existingItemIndex) {
             return {
               ...cartItem,
@@ -55,38 +54,38 @@ const ProductDetails = ({
       <div className="sizes-wrapper">
         <div className="size-numbers-container">
           <p
-            className={`size ${shoeSize === "7" ? "selected" : ""}`}
-            onClick={() => setShoeSize("7")}
+            className={`size ${shoeSize === 7 ? "selected" : ""}`}
+            onClick={() => setShoeSize(7)}
           >
             7
           </p>
           <p
-            className={`size ${shoeSize === "8" ? "selected" : ""}`}
-            onClick={() => setShoeSize("8")}
+            className={`size ${shoeSize === 8 ? "selected" : ""}`}
+            onClick={() => setShoeSize(8)}
           >
             8
           </p>
           <p
-            className={`size ${shoeSize === "9" ? "selected" : ""}`}
-            onClick={() => setShoeSize("9")}
+            className={`size ${shoeSize === 9 ? "selected" : ""}`}
+            onClick={() => setShoeSize(9)}
           >
             9
           </p>
           <p
-            className={`size ${shoeSize === "10" ? "selected" : ""}`}
-            onClick={() => setShoeSize("10")}
+            className={`size ${shoeSize === 10 ? "selected" : ""}`}
+            onClick={() => setShoeSize(10)}
           >
             10
           </p>
           <p
-            className={`size ${shoeSize === "11" ? "selected" : ""}`}
-            onClick={() => setShoeSize("11")}
+            className={`size ${shoeSize === 11 ? "selected" : ""}`}
+            onClick={() => setShoeSize(11)}
           >
             11
           </p>
           <p
-            className={`size ${shoeSize === "12" ? "selected" : ""}`}
-            onClick={() => setShoeSize("12")}
+            className={`size ${shoeSize === 12 ? "selected" : ""}`}
+            onClick={() => setShoeSize(12)}
           >
             12
           </p>

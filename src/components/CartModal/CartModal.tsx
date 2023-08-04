@@ -8,7 +8,7 @@ import ShoeIconPink from "../../assets/images/shoe-icon-pink.png";
 
 interface CartItem {
   shoeColor: string;
-  shoeSize: string | undefined;
+  shoeSize: number | undefined;
   shoeQuantity: number;
   shoePrice: number;
 }
@@ -41,7 +41,7 @@ const CartModal = ({
 }: {
   cartTagDragged: boolean;
   cartItems: CartItem[];
-  setCartItems: (cartItems: CartItem[]) => void;
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
 }) => {
   const getTotal = (cartItems: CartItem[]) => {
     if (cartItems.length > 0) {
@@ -52,6 +52,31 @@ const CartModal = ({
       return total;
     }
   };
+
+  const handleQuantityChange = (index: number, newQuantity: number) => {
+    if (newQuantity > 0) {
+      setCartItems((prevCartItems) =>
+        prevCartItems.map((item, idx) =>
+          idx === index ? { ...item, shoeQuantity: newQuantity } : item
+        )
+      );
+    } else {
+      setCartItems((prevCartItems) =>
+        prevCartItems.filter((item, idx) => idx !== index)
+      );
+    }
+  };
+
+  const numberOfTotalItems = (cartItems: CartItem[]) => {
+    if (cartItems.length > 0) {
+      let totalItems = 0;
+      cartItems.map((item) => {
+        totalItems += item.shoeQuantity;
+      });
+      return totalItems;
+    }
+  };
+
   return (
     <Backdrop>
       <motion.div
@@ -65,7 +90,12 @@ const CartModal = ({
         <div className="cart-contents-container">
           <div className="header-container">
             <p className="header">CART</p>
-            <p className="header-quantity">({cartItems.length} items)</p>
+            {cartItems.length > 0 && (
+              <p className="header-quantity">
+                ({numberOfTotalItems(cartItems)}{" "}
+                {numberOfTotalItems(cartItems) === 1 ? "item" : "items"})
+              </p>
+            )}
           </div>
 
           {cartItems.length > 0 && (
@@ -101,19 +131,29 @@ const CartModal = ({
                     <td>ultraboost 1.0</td>
                     <td>{item.shoeColor}</td>
                     <td>{item.shoeSize}</td>
-                    <td>{item.shoePrice}</td>
+                    <td>{item.shoePrice.toFixed(2)}</td>
                     <td>
                       <div className="quantity-container">
                         <span>
-                          <CiCircleMinus className="plus-icon" />
+                          <CiCircleMinus
+                            onClick={() =>
+                              handleQuantityChange(index, item.shoeQuantity - 1)
+                            }
+                            className="minus-icon"
+                          />
                         </span>
                         <p className="quantity-table">{item.shoeQuantity}</p>
                         <span>
-                          <CiCirclePlus className="minus-icon" />
+                          <CiCirclePlus
+                            onClick={() =>
+                              handleQuantityChange(index, item.shoeQuantity + 1)
+                            }
+                            className="plus-icon"
+                          />
                         </span>
                       </div>
                     </td>
-                    <td>{item.shoePrice * item.shoeQuantity}</td>
+                    <td>{(item.shoePrice * item.shoeQuantity).toFixed(2)}</td>
                   </tr>
                 ))}
 
@@ -121,7 +161,9 @@ const CartModal = ({
                   <td></td>
                 </tr>
                 <tr className="subtotal-container">
-                  <td colSpan={7}>SUBTOTAL: {getTotal(cartItems)}</td>
+                  <td colSpan={7}>
+                    SUBTOTAL: ${getTotal(cartItems)?.toFixed(2)}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -146,11 +188,21 @@ const CartModal = ({
                     <p className="product-size-mobile">size: {item.shoeSize}</p>
                     <div className="quantity-container">
                       <span>
-                        <CiCircleMinus className="plus-icon" />
+                        <CiCircleMinus
+                          onClick={() =>
+                            handleQuantityChange(index, item.shoeQuantity - 1)
+                          }
+                          className="minus-icon"
+                        />
                       </span>
                       <p className="quantity-table">{item.shoeQuantity}</p>
                       <span>
-                        <CiCirclePlus className="minus-icon" />
+                        <CiCirclePlus
+                          onClick={() =>
+                            handleQuantityChange(index, item.shoeQuantity + 1)
+                          }
+                          className="plus-icon"
+                        />
                       </span>
                     </div>
                     <p className="product-price-mobile">

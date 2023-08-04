@@ -5,7 +5,7 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 
 interface CartItem {
   shoeColor: string;
-  shoeSize: string | undefined;
+  shoeSize: number | undefined;
   shoeQuantity: number;
   shoePrice: number;
 }
@@ -24,10 +24,10 @@ const ProductPage = ({
   isProductSectionVisible: boolean | undefined;
   shoeColor: string;
   setShoeColor: (shoeColor: string) => void;
-  shoeSize: string | undefined;
-  setShoeSize: (shoeSize: string | undefined) => void;
+  shoeSize: number | undefined;
+  setShoeSize: (shoeSize: number | undefined) => void;
   cartItems: CartItem[];
-  setCartItems: (cartItems: CartItem[]) => void;
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
 }) => {
   useEffect(() => {
     if (isProductSectionVisible) {

@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface CartItem {
   shoeColor: string;
-  shoeSize: string | undefined;
+  shoeSize: number | undefined;
   shoeQuantity: number;
   shoePrice: number;
 }
@@ -22,7 +22,7 @@ function App() {
     useState<boolean>();
   const [isHomeSectionVisible, setIsHomeSectionVisible] = useState<boolean>();
   const [shoeColor, setShoeColor] = useState("black");
-  const [shoeSize, setShoeSize] = useState<string | undefined>();
+  const [shoeSize, setShoeSize] = useState<number | undefined>();
 
   const [scrolledPixels, setScrolledPixels] = useState(80);
   const [lineFlag, setLineFlag] = useState(false);
