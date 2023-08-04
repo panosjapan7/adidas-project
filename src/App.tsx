@@ -25,13 +25,7 @@ function App() {
   useState<boolean>();
   const [shoeColor, setShoeColor] = useState("black");
   const [shoeSize, setShoeSize] = useState<number | undefined>();
-
-  const [scrolledPixels, setScrolledPixels] = useState(80);
-  const [lineFlag, setLineFlag] = useState(false);
-  const [reachedBottom, setReachedBottom] = useState(false);
-
   const [cartTagDragged, setCartTagDragged] = useState(false);
-
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const startAnimation = () => {
