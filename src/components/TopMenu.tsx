@@ -44,7 +44,7 @@ const TopMenu = ({
         minY: 0,
         maxY: 0.4,
       },
-      edgeResistance: 0.85,
+      edgeResistance: 0.5,
       onDrag() {
         this.prevY = this.y;
         if (this.y >= 40) {
@@ -67,9 +67,6 @@ const TopMenu = ({
 
   return (
     <div className="menu-wrapper">
-      {/* <div className="mobile-menu-wrapper">
-        <div className="mobile-menu-icon-container"></div>
-      </div> */}
       <div className="mobile-menu-wrapper">
         <input
           type="checkbox"
