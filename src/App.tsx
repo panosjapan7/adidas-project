@@ -95,29 +95,6 @@ function App() {
           startAnimation={startAnimation}
         />
       </div>
-
-      {/* <div className="navivationArrows-wrapper">
-        <div className="navigationArrows-content-wrapper">
-          <div className="arrow-container">
-            <SlArrowDown
-              className="arrowDown"
-              style={{
-                color: isProductSectionVisible ? "#D3D3D3" : "black",
-              }}
-            />
-          </div>
-          <div
-            className="vertical-line"
-            style={{ height: scrolledPixels }}
-          ></div>
-          <div className="arrow-container">
-            <SlArrowUp
-              className="arrowUp"
-              style={{ color: isProductSectionVisible ? "black" : "#D3D3D3" }}
-            />
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
