@@ -211,7 +211,7 @@ const CartModal = ({
                       </span>
                     </div>
                     <p className="product-price-mobile">
-                      TOTAL: {(item.shoePrice * item.shoeQuantity).toFixed(2)}
+                      TOTAL: ${(item.shoePrice * item.shoeQuantity).toFixed(2)}
                     </p>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const CartModal = ({
               {cartItems.length > 0 && <div className="hr-mobile"></div>}
               {cartItems.length > 0 && (
                 <p className="subtotal-mobile">
-                  SUBTOTAL: {getTotal(cartItems)?.toFixed(2)}
+                  SUBTOTAL: ${getTotal(cartItems)?.toFixed(2)}
                 </p>
               )}
             </div>
