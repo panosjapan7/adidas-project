@@ -8,6 +8,7 @@
 }
 
 section {
+  /* scroll-snap-type: y mandatory; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -46,4 +47,10 @@ h1 {
 .vertical-line {
   border: 1px solid black;
   /* height: 80px; */
+}
+
+@media (min-width: 10px) and (max-width: 600px) {
+  .container {
+    scroll-snap-type: none;
+  }
 }

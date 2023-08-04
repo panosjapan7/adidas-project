@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
+
+.product-details-wrapper {
+  width: 600px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  /* height: 100%; */
+}
+
+.sizes-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: start;
+  /* padding-top: 80px; */
+}
+.size-numbers-container {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.size {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+  cursor: pointer;
+}
+.size.selected {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: black;
+  font-weight: 700;
+  cursor: default;
+}
+.find-your-size {
+  font-family: "Tektur", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.colors-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin-top: 20px;
+}
+.colors-container {
+  display: flex;
+  gap: 20px;
+}
+.color {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.color.selected {
+  cursor: default;
+}
+.color-checkmark {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.add-to-bag {
+  all: unset;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  background-color: black;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+.add-to-bag:focus {
+  outline: revert;
+}
+
+@media (min-width: 10px) and (max-width: 600px) {
+  .product-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sizes-wrapper {
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+  }
+  .colors-button-container {
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .colors-container {
+    justify-content: center;
+  }
+  .add-to-bag {
+    height: 50px;
+    /* width: 100%; */
+  }
+}
+
+@media (min-width: 10px) and (max-width: 200px) {
+  .size-numbers-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .add-to-bag {
+    width: 100%;
+  }
+}
+
+/* iPad Air */
+@media (width: 820px) and (height: 1180px) {
+  .sizes-wrapper {
+    padding-top: 40px;
+  }
+}
+
+/* iPad Mini */
+@media (width: 768px) and (height: 1024px) {
+  .sizes-wrapper {
+    padding-top: 40px;
+  }
+}
+
+/* Surface Pro 7 */
+@media (width: 912px) and (height: 1368px) {
+}
