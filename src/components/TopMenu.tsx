@@ -13,10 +13,14 @@ const TopMenu = ({
   cartTagDragged,
   setCartTagDragged,
   cartItems,
+  toggleModal,
+  setToggleModal,
 }: {
   cartTagDragged: boolean;
   setCartTagDragged: (cartTagDragge: boolean) => void;
   cartItems: CartItem[];
+  toggleModal: boolean;
+  setToggleModal: (toggleModal: boolean) => void;
 }) => {
   const cartTagRef = useRef<HTMLDivElement>(null);
   const [cartHeight, setCartHeight] = useState(175);
@@ -114,7 +118,12 @@ const TopMenu = ({
 
       <div className="menu-container">
         <img src={adidasLogo} className="adidas-logo" alt="adidas logo" />
-        <p className="text-links about-link">about</p>
+        <p
+          onClick={() => setToggleModal(!toggleModal)}
+          className="text-links about-link"
+        >
+          about
+        </p>
         <a
           href="https://github.com/panosjapan7/adidas-project"
           target="_blank"
