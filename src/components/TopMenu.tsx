@@ -140,12 +140,12 @@ const TopMenu = ({
               </div>
             </div>
             <a
-              className="mobile-menu-option no-hover-effect"
+              className="mobile-menu-option no-hover-effect github"
               href="https://github.com/panosjapan7/adidas-project"
               target="_blank"
               rel="noreferrer"
             >
-              GITHUB
+              GITHUB REPO
             </a>
           </div>
         </div>
