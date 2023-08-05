@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
 
 .navivationArrows-wrapper {
   position: absolute;
@@ -202,6 +202,7 @@ a:hover::before,
     border: 6px solid black;
     border-radius: 10px;
     transition: left 3.5s ease-in-out;
+    overflow-y: auto;
   }
 
   .mobile-menu-options {
@@ -212,12 +213,19 @@ a:hover::before,
     height: 40vh;
     z-index: 300;
     position: relative;
-    padding-top: 130px;
+    padding-top: 80px;
   }
   .adidas-logo-small-black {
     width: 100px;
     height: auto;
     padding-bottom: 20px;
+  }
+
+  .about-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .mobile-menu-option {
     color: black;
@@ -230,6 +238,49 @@ a:hover::before,
     transform: none;
     background-color: transparent;
   }
+
+  .about-copy-container-mobile {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100%; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0px 20px 0px 20px;
+  }
+  .description-copy-mobile {
+    font-size: 1rem;
+  }
+  .features-container-mobile {
+    margin-top: 20px;
+  }
+  .features-header-mobile {
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+  .features-mobile {
+    font-size: 0.95rem;
+    padding-left: 20px;
+  }
+  .feature-mobile {
+    margin-top: 5px;
+  }
+  .tech-container-mobile {
+    margin-top: 20px;
+  }
+  .tech-header-mobile {
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+  .tech-mobile {
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+}
+
+.github {
+  font-weight: 500;
 }
 
 /* CART DESKTOP */
