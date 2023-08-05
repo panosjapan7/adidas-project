@@ -100,7 +100,6 @@ const ProductDetails = ({
             12
           </p>
         </div>
-        <p className="find-your-size">find your size</p>
       </div>
       <div className="colors-button-container">
         <div className="colors-container">
