@@ -26,6 +26,13 @@ const TopMenu = ({
   const [cartHeight, setCartHeight] = useState(175);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  const featuresList = [
+    "Cart Modal animation built with Framer Motion",
+    "Draggable, animated Cart UI element built with GSAP",
+    "Image slider built with JavaScript and CSS (no libraries)",
+    "Cart functionality",
+  ];
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setShowMobileMenu(e.target.checked);
   };
@@ -109,6 +116,28 @@ const TopMenu = ({
               >
                 ABOUT
               </p>
+              <div className="about-copy-container-mobile">
+                <p className="description-copy-mobile">
+                  This is a personal frontend project I built for my portfolio.
+                </p>
+                <div className="features-container-mobile">
+                  <p className="features-header-mobile">Features</p>
+                  <ul className="features-mobile">
+                    {featuresList.map((feature, index) => (
+                      <li className="feature-mobile" key={index}>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="tech-container-mobile">
+                  <p className="tech-header-mobile">Technologies</p>
+                  <p className="tech-mobile">
+                    CSS, Framer Motion, GreenSock Animation Platform (GSAP),
+                    React, TypeScript
+                  </p>
+                </div>
+              </div>
             </div>
             <a
               className="mobile-menu-option no-hover-effect"

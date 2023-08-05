@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
 
 .navivationArrows-wrapper {
   position: absolute;
@@ -219,6 +219,13 @@ a:hover::before,
     height: auto;
     padding-bottom: 20px;
   }
+
+  .about-container-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .mobile-menu-option {
     color: black;
     font-family: "Tektur", sans-serif;
@@ -229,6 +236,44 @@ a:hover::before,
   .mobile-menu-option::before {
     transform: none;
     background-color: transparent;
+  }
+
+  .about-copy-container-mobile {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100%; */
+    margin-top: 10px;
+    padding: 0px 20px 0px 20px;
+  }
+  .description-copy-mobile {
+    font-size: 1rem;
+  }
+  .features-container-mobile {
+    margin-top: 20px;
+  }
+  .features-header-mobile {
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+  .features-mobile {
+    font-size: 0.95rem;
+    padding-left: 20px;
+  }
+  .feature-mobile {
+    margin-top: 5px;
+  }
+  .tech-container-mobile {
+    margin-top: 20px;
+  }
+  .tech-header-mobile {
+    font-size: 1.02rem;
+    font-weight: 600;
+  }
+  .tech-mobile {
+    font-size: 0.95rem;
+    font-style: italic;
   }
 }
 
