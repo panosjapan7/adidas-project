@@ -33,14 +33,6 @@
   font-weight: 700;
   cursor: default;
 }
-.find-your-size {
-  font-family: "Tektur", sans-serif;
-  font-weight: 400;
-  font-size: 0.9rem;
-  letter-spacing: 0.05rem;
-  cursor: pointer;
-  text-decoration: underline;
-}
 
 .colors-button-container {
   display: flex;
