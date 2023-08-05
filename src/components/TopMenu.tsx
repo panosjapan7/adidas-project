@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import { BsHandbag, BsHandbagFill } from "react-icons/bs";
-import "../assets/styles/topBar.css";
+import "../assets/styles/topMenu.css";
 import { CartItem } from "../interfaces/interfaces";
 import adidasLogo from "../assets/images/adidas-logo-white.png";
 import adidasLogoSmall from "../assets/images/adidas-logo-small-black.png";
@@ -102,13 +102,14 @@ const TopMenu = ({
               className="adidas-logo-small-black"
               alt="adidas logo"
             />
-            <p
-              className="mobile-menu-option no-hover-effect"
-              onClick={handleAnchorClick}
-            >
-              ABOUT
-            </p>
-
+            <div className="about-container-mobile">
+              <p
+                className="mobile-menu-option no-hover-effect"
+                onClick={handleAnchorClick}
+              >
+                ABOUT
+              </p>
+            </div>
             <a
               className="mobile-menu-option no-hover-effect"
               href="https://github.com/panosjapan7/adidas-project"
