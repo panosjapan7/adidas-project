@@ -8,6 +8,7 @@ import Home from "./sections/Home";
 import ProductPage from "./sections/ProductPage";
 import TopMenu from "./components/TopMenu";
 import CartModal from "./components/CartModal/CartModal";
+import AboutModal from "./components/AboutModal/AboutModal";
 
 gsap.registerPlugin(Draggable);
 
@@ -21,6 +22,7 @@ function App() {
   const [shoeSize, setShoeSize] = useState<number | undefined>();
   const [cartTagDragged, setCartTagDragged] = useState(false);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [toggleModal, setToggleModal] = useState(false);
 
   const startAnimation = () => {
     gsap.fromTo(
@@ -58,6 +60,8 @@ function App() {
         cartTagDragged={cartTagDragged}
         setCartTagDragged={setCartTagDragged}
         cartItems={cartItems}
+        toggleModal={toggleModal}
+        setToggleModal={setToggleModal}
       />
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {cartTagDragged && (
@@ -68,6 +72,7 @@ function App() {
           />
         )}
       </AnimatePresence>
+      {toggleModal && <AboutModal />}
 
       <div className="container" ref={containerRef}>
         <Home shoeColor={shoeColor} />
