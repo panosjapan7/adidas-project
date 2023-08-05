@@ -72,7 +72,7 @@ function App() {
           />
         )}
       </AnimatePresence>
-      {toggleModal && <AboutModal />}
+      {toggleModal && <AboutModal setToggleModal={setToggleModal} />}
 
       <div className="container" ref={containerRef}>
         <Home shoeColor={shoeColor} />
