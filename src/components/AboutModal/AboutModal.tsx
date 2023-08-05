@@ -4,8 +4,10 @@ import "../../assets/styles/aboutModal.css";
 import { AiOutlineClose } from "react-icons/ai";
 
 const AboutModal = ({
+  toggleModal,
   setToggleModal,
 }: {
+  toggleModal: boolean;
   setToggleModal: (toggleModal: boolean) => void;
 }) => {
   const modalRef = useRef<HTMLDivElement>(null);
@@ -16,23 +18,30 @@ const AboutModal = ({
     "Cart functionality",
   ];
 
-  const handleClickOutsideModal = (event: MouseEvent) => {
-    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-      setToggleModal(false);
-    }
-  };
-
   useEffect(() => {
-    document.body.addEventListener("click", handleClickOutsideModal);
-    return () => {
-      document.body.removeEventListener("click", handleClickOutsideModal);
+    const handleClickOutsideModal = (event: MouseEvent) => {
+      if (toggleModal) {
+        event.stopPropagation();
+        setToggleModal(false);
+      }
     };
-  }, []);
+    if (modalRef) {
+      document.body.addEventListener("click", handleClickOutsideModal);
+    }
+  }, [modalRef, setToggleModal, toggleModal]);
+
+  const handleModalClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+  };
 
   return (
     <div>
       <Backdrop>
-        <div className="about-modal-wrapper" ref={modalRef}>
+        <div
+          className="about-modal-wrapper"
+          ref={modalRef}
+          onClick={handleModalClick}
+        >
           <div className="top-container">
             <h2 className="about-header">about</h2>
             <AiOutlineClose

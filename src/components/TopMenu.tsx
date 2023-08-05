@@ -69,6 +69,11 @@ const TopMenu = ({
     });
   }, [cartTagDragged, setCartTagDragged]);
 
+  const handleAboutLinkClick = (e: React.MouseEvent<HTMLParagraphElement>) => {
+    e.stopPropagation();
+    setToggleModal(!toggleModal);
+  };
+
   return (
     <div className="menu-wrapper">
       <div className="mobile-menu-wrapper">
@@ -119,7 +124,8 @@ const TopMenu = ({
       <div className="menu-container">
         <img src={adidasLogo} className="adidas-logo" alt="adidas logo" />
         <p
-          onClick={() => setToggleModal(!toggleModal)}
+          // onClick={() => setToggleModal(!toggleModal)}
+          onClick={handleAboutLinkClick}
           className="text-links about-link"
         >
           about
