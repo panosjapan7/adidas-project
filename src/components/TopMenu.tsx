@@ -23,7 +23,7 @@ const TopMenu = ({
   setToggleModal: (toggleModal: boolean) => void;
 }) => {
   const cartTagRef = useRef<HTMLDivElement>(null);
-  const [cartHeight, setCartHeight] = useState(175);
+  const [cartHeight] = useState(175);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const featuresList = [
@@ -159,11 +159,7 @@ const TopMenu = ({
 
       <div className="menu-container">
         <img src={adidasLogo} className="adidas-logo" alt="adidas logo" />
-        <p
-          // onClick={() => setToggleModal(!toggleModal)}
-          onClick={handleAboutLinkClick}
-          className="text-links about-link"
-        >
+        <p onClick={handleAboutLinkClick} className="text-links about-link">
           about
         </p>
         <a
