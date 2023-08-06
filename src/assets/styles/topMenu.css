@@ -1,31 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tektur:wght@400;500;600&display=swap");
 
-.navivationArrows-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  margin-bottom: 5px;
-}
-
-.navigationArrows-content-wrapper {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.arrowUp,
-.arrowDown {
-  width: 26px;
-  height: auto;
-}
-
-.vertical-line {
-  border: 1px solid black;
-  height: 80px;
-}
-
 /* TOP MENU DESKTOP */
 .menu-wrapper {
   position: absolute;
@@ -245,7 +219,6 @@ a:hover::before,
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 100%; */
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 0px 20px 0px 20px;
@@ -285,7 +258,6 @@ a:hover::before,
 /* CART DESKTOP */
 .cart-desktop-container {
   width: 65px;
-  /* height: 75px; */
   background-color: black;
   align-self: center;
   border-radius: 0 0 5px 5px;
