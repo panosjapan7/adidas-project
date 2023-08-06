@@ -4,7 +4,6 @@
   width: 600px;
   padding-right: 20px;
   padding-bottom: 20px;
-  /* height: 100%; */
 }
 
 .sizes-wrapper {
@@ -13,7 +12,6 @@
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: start;
-  /* padding-top: 80px; */
 }
 .size-numbers-container {
   display: flex;
@@ -106,7 +104,6 @@
   }
   .add-to-bag {
     height: 50px;
-    /* width: 100%; */
   }
 }
 

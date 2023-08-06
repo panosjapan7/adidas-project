@@ -6,37 +6,29 @@
   left: 0;
   height: 100%;
   width: 100%;
-  /* background: rgba(211, 211, 211, 1); */
-  /* background-color: rgb(241, 241, 241, 1); */
-  background-color: rgb(126, 126, 126, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 40;
+  background-color: rgb(126, 126, 126, 0.5);
   border: 6px solid black;
   border-radius: 10px;
   overflow-y: scroll;
   padding-bottom: 30px;
+  z-index: 40;
 }
 
 .modal {
   width: clamp(50%, 700px, 90%);
   height: min(70%, 400px);
-
   margin: auto;
   padding: 1rem 2rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 45;
   background-color: rgb(255, 255, 255);
-
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-
-  /* Nice plastic border */
-  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2); /* Nice plastic border */
+  z-index: 45;
 }
 
 .cart-contents-container {
@@ -225,8 +217,6 @@ th {
   .shoe-icon-mobile {
     max-width: 80px;
     height: 100%;
-  }
-  .product-details-container-mobile {
   }
   .product-details-container-mobile p {
     font-family: "Inter", "sans-serif";

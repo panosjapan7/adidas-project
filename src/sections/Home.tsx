@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/styles/home.css";
 import ShoeHeroDesktop from "../assets/images/shoe-hero-desktop.svg";
 import ShoeHeroDesktopPink from "../assets/images/shoe-hero-pink.svg";
