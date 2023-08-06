@@ -2,20 +2,15 @@
 
 .about-modal-wrapper {
   width: clamp(50%, 700px, 90%);
-  /* height: min(70%, 400px); */
   height: auto;
-
   margin: auto;
   padding: 1rem 2rem 2rem 2rem;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   z-index: 45;
   background-color: rgb(255, 255, 255);
-
-  /* Nice plastic border */
-  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2); /* Nice plastic border */
   overflow-y: auto;
 }
 @media (max-width: 310px) {
@@ -52,7 +47,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: 100%; */
   margin-top: 10px;
 }
 
