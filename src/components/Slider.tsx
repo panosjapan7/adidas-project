@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../assets/styles/slider.css";
+import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import BlackS0 from "../assets/images/slides/slide-0-black.png";
 import BlackS1 from "../assets/images/slides/slide-1-black.png";
 import BlackS2 from "../assets/images/slides/slide-2-black.png";
@@ -10,8 +11,6 @@ import PinkS1 from "../assets/images/slides/slide-1-pink.png";
 import PinkS2 from "../assets/images/slides/slide-2-pink.png";
 import PinkS3 from "../assets/images/slides/slide-3-pink.png";
 import PinkS4 from "../assets/images/slides/slide-4-pink.png";
-
-import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 
 const Slider = ({ shoeColor }: { shoeColor: string }) => {
   const slidesBlack = [BlackS0, BlackS1, BlackS2, BlackS3, BlackS4];
