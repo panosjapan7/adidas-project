@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# ![adidas ultraboost website](src/assets/readme-images/home-desktop.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# adidas ultraboost 1.0 Landing Page
 
-## Available Scripts
+<table>
+<tr>
+<td>
+  I've built a responsive landing page for my portfolio using React, CSS, and TypeScript. It consists of two sections, Home page and Product page, has frontend cart functionality as well as animations powered by GSAP and Framer Motion.
+</td>
+</tr>
+</table>
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+Here is a working live demo hosted on Vercel: https://iharsh234.github.io/WebApp/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Site
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Home Page
 
-### `npm test`
+![](src/assets/readme-images/home-desktop.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Product Page
 
-### `npm run build`
+![](src/assets/readme-images/product-page-desktop.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Mobile views
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](src/assets/readme-images/mobile-views.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Interactivity
 
-### `npm run eject`
+### Home Page & Image Slider
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The image slider is built with JavaScript (no libraries).
+![](src/assets/readme-images/interaction-product-page.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Pull-to-Open Cart Modal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The user drags down the UI's Cart Tab to reveal/hide the Cart modal. This is implemented with the use of GSAP's draggable interaction and elastic animation.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Every time an item is added to the screen, the Cart Tab animates, providing a visual hint as to what the user must do to open the Cart modal.
 
-## Learn More
+Last, the Cart icon changes if the cart is empty or not.
+![](src/assets/readme-images/interaction-cart.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built with
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- CSS
+- TypeScript
+- GreenSock Animation Platform (GSAP)
+- Framer Motion
