@@ -62,7 +62,6 @@
 .slider-dot.active {
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   background-color: #d3d3d3;
   border: none;
   cursor: default;
