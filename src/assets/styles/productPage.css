@@ -30,15 +30,12 @@
   width: 50vw;
 }
 .left-column {
-  /* border: 1px solid red; */
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* background-color: #ffff; */
 }
 
 /* iPad Air */
@@ -113,11 +110,6 @@
   }
 
   .left-column {
-    /* height: 80vh; */
-    /* height: 1000px; */
-    /* margin-top: 40%; */
-    /* justify-content: end; */
-    /* height: 200vh; */
     padding-bottom: 30px;
     height: 80vh;
   }
@@ -149,22 +141,17 @@
 
 /* RIGHT COLUMN */
 .right-column {
-  /* border: 1px solid blue; */
   background-color: #ffff;
   height: 0;
-  /* overflow-y: hidden; */
   opacity: 0;
-
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* padding-top: 80px; */
   padding-left: 50px;
 }
 
 .right-column.expanded {
   animation: slideInColumnFromTop 0.8s forwards;
-  /* overflow: auto; */
 }
 @keyframes slideInColumnFromTop {
   to {
@@ -172,17 +159,3 @@
     opacity: 1;
   }
 }
-
-@media (min-width: 600px) and (max-width: 727px) {
-  .sizes-wrapper {
-  }
-}
-
-/* @media (min-width: 10px) and (max-width: 600px) {
-  .right-column {
-    display: flex;
-    align-items: center;
-    padding-top: 80px;
-    padding-left: 50px;
-  }
-} */
