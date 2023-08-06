@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import gsap from "gsap";
 import Draggable from "gsap/Draggable";
 import "../../assets/styles/productDetails.css";
@@ -25,6 +25,8 @@ const ProductDetails = ({
   setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
   startAnimation: () => void;
 }) => {
+  const [buttonClicked, setButtonClicked] = useState(false);
+
   const addToCart = (item: CartItem) => {
     const existingItemIndex = cartItems.findIndex(
       (cartItem) =>
@@ -57,6 +59,12 @@ const ProductDetails = ({
       shoePrice: 190,
     });
     startAnimation();
+
+    setButtonClicked(true);
+
+    setTimeout(() => {
+      setButtonClicked(false);
+    }, 200);
   };
 
   return (
@@ -120,7 +128,7 @@ const ProductDetails = ({
         </div>
         <button
           onClick={handleAddToBag}
-          className="add-to-bag"
+          className={`add-to-bag ${buttonClicked ? "clicked" : ""}`}
           disabled={shoeSize === undefined ? true : false}
         >
           ADD TO BAG
