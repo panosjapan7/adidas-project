@@ -13,7 +13,7 @@ const AboutModal = ({
   const modalRef = useRef<HTMLDivElement>(null);
   const featuresList = [
     "Cart Modal animation built with Framer Motion",
-    "Draggable, animated Cart UI element built with GSAP",
+    "Pull-to-Open, draggable, animated Cart UI element built with GSAP",
     "Image slider built with JavaScript and CSS (no libraries)",
     "Cart functionality",
   ];
@@ -69,6 +69,10 @@ const AboutModal = ({
                 CSS, Framer Motion, GreenSock Animation Platform (GSAP), React,
                 TypeScript
               </p>
+            </div>
+            <div className="name-role-container">
+              <p className="name-header">Panos Tsapanidis</p>
+              <p className="role">Frontend-focused Fullstack Developer</p>
             </div>
           </div>
         </div>

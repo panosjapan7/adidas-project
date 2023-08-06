@@ -28,7 +28,7 @@ const TopMenu = ({
 
   const featuresList = [
     "Cart Modal animation built with Framer Motion",
-    "Draggable, animated Cart UI element built with GSAP",
+    "Pull-to-Open, draggable, animated Cart UI element built with GSAP",
     "Image slider built with JavaScript and CSS (no libraries)",
     "Cart functionality",
   ];
@@ -135,6 +135,12 @@ const TopMenu = ({
                   <p className="tech-mobile">
                     CSS, Framer Motion, GreenSock Animation Platform (GSAP),
                     React, TypeScript
+                  </p>
+                </div>
+                <div className="name-role-container-mobile">
+                  <p className="name-header-mobile">Panos Tsapanidis</p>
+                  <p className="role-mobile">
+                    Frontend-focused Fullstack Developer
                   </p>
                 </div>
               </div>
