@@ -55,18 +55,19 @@
   /* height: 100%; */
   margin-top: 10px;
 }
-.description-copy {
-}
 
+.features-container,
 .tech-container,
-.features-container {
+.name-role-container {
   margin-top: 20px;
 }
 .tech-header,
-.features-header {
+.features-header,
+.name-header {
   font-weight: 600;
 }
-.tech {
+.tech,
+.role {
   font-size: 0.9rem;
   font-weight: 400;
   font-style: italic;
