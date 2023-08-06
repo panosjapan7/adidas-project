@@ -12,7 +12,7 @@
 
 ## Demo
 
-Here is a working live demo hosted on Vercel: https://iharsh234.github.io/WebApp/
+Here is a working live demo hosted on Vercel: https://adidas-project.vercel.app/
 
 ## Site
 
