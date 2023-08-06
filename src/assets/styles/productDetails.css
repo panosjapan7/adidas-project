@@ -71,6 +71,7 @@
   color: white;
   text-align: center;
   border-radius: 10px;
+  transition: background-color 0.1s;
 }
 .add-to-bag:focus {
   outline: revert;
@@ -78,6 +79,9 @@
 .add-to-bag:disabled {
   cursor: default;
   background-color: #d3d3d3;
+}
+.add-to-bag.clicked {
+  background-color: #5a5a5a;
 }
 
 @media (min-width: 10px) and (max-width: 600px) {
@@ -129,8 +133,4 @@
   .sizes-wrapper {
     padding-top: 40px;
   }
-}
-
-/* Surface Pro 7 */
-@media (width: 912px) and (height: 1368px) {
 }
