@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../assets/styles/productInfoBox.css";
 
 const ProductInfoBox = ({ shoeColor }: { shoeColor: string }) => {
