@@ -8,7 +8,6 @@
 }
 
 section {
-  /* scroll-snap-type: y mandatory; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -34,19 +33,6 @@ h1 {
   display: flex;
   gap: 20px;
   align-items: center;
-}
-
-.arrow-container {
-}
-.arrowUp,
-.arrowDown {
-  width: 26px;
-  height: auto;
-}
-
-.vertical-line {
-  border: 1px solid black;
-  /* height: 80px; */
 }
 
 @media (min-width: 10px) and (max-width: 600px) {
