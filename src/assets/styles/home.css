@@ -5,14 +5,7 @@
 }
 .ultraboost-text-container,
 .ultraboost-empty-text-container {
-  /* height: 100vh; */
   width: 95vw;
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-
   position: absolute;
   top: 32%;
   bottom: 0;
@@ -29,7 +22,6 @@
   font-weight: 500;
   font-size: 10rem;
   color: black;
-  z-index: 10;
   position: absolute;
   left: 0;
   right: 0;
@@ -38,6 +30,7 @@
   margin: auto;
   width: 100%;
   cursor: default;
+  z-index: 10;
 }
 .ultraboost-empty-text-container {
   z-index: 20;
@@ -46,7 +39,6 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
-  /* -webkit-text-stroke-color: red; */
   z-index: 20;
 }
 .shoe-hero-desktop-container {
@@ -66,9 +58,9 @@
   width: 100%;
   height: auto;
   opacity: 0;
-  transform: translateY(-160px) rotate(-33deg); /* Start 160px higher */
-  z-index: 6;
+  transform: translateY(-160px) rotate(-33deg);
   animation: slideInFromTop 1s forwards;
+  z-index: 6;
 }
 @keyframes slideInFromTop {
   to {
@@ -81,10 +73,10 @@
   width: 100%;
   height: auto;
   opacity: 0;
-  z-index: 5;
   margin: 2% 0 0 13%;
   padding-right: 100px;
   animation: fadeIn 1.5s forwards;
+  z-index: 5;
 }
 
 @media (min-width: 1700px) {
@@ -158,35 +150,8 @@
   display: none;
 }
 @media (min-width: 376px) and (max-width: 500px) {
-  /* .ultraboost-text-mobile,
-  .ultraboost-text-empty-mobile {
-    display: block;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vh;
-    position: fixed;
-    margin-top: 80%;
-
-    font-family: "Tektur", "sans-serif";
-    font-size: 4rem;
-    transform: rotate(90deg);
-    font-weight: 400;
-    cursor: default;
-  }
-  .ultraboost-text-mobile {
-    z-index: 4;
-  }
-  .ultraboost-text-empty-mobile {
-    z-index: 7;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
-  } */
-
   .ultraboost-text-container,
   .ultraboost-empty-text-container {
-    /* display: none; */
     margin-top: 20%;
   }
   .ultraboost-text,
@@ -254,31 +219,6 @@
     background-size: 28px 42px;
     background-color: #ffffff;
   }
-  /* .ultraboost-text-mobile,
-  .ultraboost-text-empty-mobile {
-    display: block;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vh;
-    position: fixed;
-    margin-top: 120%;
-
-    font-family: "Tektur", "sans-serif";
-    font-size: 4.5rem;
-    transform: rotate(90deg);
-    font-weight: 400;
-    cursor: default;
-  }
-  .ultraboost-text-mobile {
-    z-index: 4;
-  }
-  .ultraboost-text-empty-mobile {
-    z-index: 7;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba(241, 241, 241, 0.5);
-  } */
   .ultraboost-text-container,
   .ultraboost-empty-text-container {
     display: none;
