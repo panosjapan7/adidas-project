@@ -35,6 +35,12 @@ Here is a working live demo hosted on Vercel: https://adidas-project.vercel.app/
 The image slider is built with JavaScript (no libraries).
 ![](src/assets/readme-images/interaction-product-page.gif)
 
+### Swipable Image Slider on Mobile
+
+On mobile, you can also navigate to the next/previous slide by swiping right/left. The buttons and dots still work too.
+
+<img src="src/assets/readme-images/interaction-slider-mobile.gif" alt="mobile slider" height="500" />
+
 ### Pull-to-Open Cart Modal
 
 The user drags down the UI's Cart Tab to reveal/hide the Cart modal. This is implemented with the use of GSAP's draggable interaction and elastic animation.
