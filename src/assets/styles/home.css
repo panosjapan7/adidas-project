@@ -132,7 +132,7 @@
 @media (min-width: 10px) and (max-width: 600px) {
   .shoe-hero-desktop-container {
     gap: 6%;
-    width: 50vh;
+    width: 100%;
     height: 50vh;
     padding-top: 5%;
     padding-right: 10%;
