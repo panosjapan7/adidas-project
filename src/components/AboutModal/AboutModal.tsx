@@ -71,7 +71,14 @@ const AboutModal = ({
               </p>
             </div>
             <div className="name-role-container">
-              <p className="name-header">Panos Tsapanidis</p>
+              <a
+                href="https://portfolio-v2-lyart-sigma.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="name-header"
+              >
+                Panos Tsapanidis
+              </a>
               <p className="role">Frontend-focused Fullstack Developer</p>
             </div>
           </div>

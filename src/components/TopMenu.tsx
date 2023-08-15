@@ -138,7 +138,14 @@ const TopMenu = ({
                   </p>
                 </div>
                 <div className="name-role-container-mobile">
-                  <p className="name-header-mobile">Panos Tsapanidis</p>
+                  <a
+                    href="https://portfolio-v2-lyart-sigma.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="name-header-mobile"
+                  >
+                    Panos Tsapanidis
+                  </a>
                   <p className="role-mobile">
                     Frontend-focused Fullstack Developer
                   </p>

@@ -60,6 +60,17 @@
 .name-header {
   font-weight: 600;
 }
+.name-header {
+  color: black;
+  text-decoration: underline;
+}
+.name-header::before {
+  content: normal;
+}
+.name-header:hover::before {
+  transform-origin: none;
+  transform: none;
+}
 .tech,
 .role {
   font-size: 0.9rem;
