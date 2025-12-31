@@ -39,14 +39,12 @@ const CartModal = ({
   setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>;
 }) => {
   const getTotal = (cartItems: CartItem[]) => {
-    if (cartItems.length > 0) {
-      let total = 0;
-      cartItems.map((item) => {
-        total += item.shoePrice * item.shoeQuantity;
-      });
-      return total;
-    }
-  };
+  let total = 0;
+  cartItems.forEach((item) => {
+    total += item.shoePrice * item.shoeQuantity;
+  });
+  return total;
+};
 
   const handleQuantityChange = (index: number, newQuantity: number) => {
     if (newQuantity > 0) {
@@ -62,15 +60,13 @@ const CartModal = ({
     }
   };
 
-  const numberOfTotalItems = (cartItems: CartItem[]) => {
-    if (cartItems.length > 0) {
-      let totalItems = 0;
-      cartItems.map((item) => {
-        totalItems += item.shoeQuantity;
-      });
-      return totalItems;
-    }
-  };
+const numberOfTotalItems = (cartItems: CartItem[]) => {
+  let totalItems = 0;
+  cartItems.forEach((item) => {
+    totalItems += item.shoeQuantity;
+  });
+  return totalItems;
+};
 
   return (
     <Backdrop>
